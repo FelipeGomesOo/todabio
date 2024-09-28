@@ -5,7 +5,27 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ebebeb;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  cursor: grab;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

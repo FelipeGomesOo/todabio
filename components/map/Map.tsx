@@ -4,16 +4,13 @@ import {
   Map,
   MapCameraChangedEvent,
 } from "@vis.gl/react-google-maps";
-import samples from "@/lib/locations";
 import PoiMarkers from "@/components/map/PoiMarkers";
-import { MarkerProvider } from "@/context/MarkerContext";
-import Sidebar from "@/components/map/Sidebar";
 export default async function TodabioMap({
-  API_KEY,
   mapId,
+  sampleList,
 }: {
-  API_KEY: string;
   mapId: string;
+  sampleList: Sample[];
 }) {
   return (
     <Map
@@ -32,9 +29,7 @@ export default async function TodabioMap({
         )
       }
     >
-      <MarkerProvider>
-        <PoiMarkers pois={samples} />
-      </MarkerProvider>
+      <PoiMarkers pois={sampleList} />
     </Map>
   );
 }

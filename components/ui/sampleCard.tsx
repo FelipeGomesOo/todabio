@@ -1,30 +1,29 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { useMap } from "@vis.gl/react-google-maps";
-export default function SampleCard({
-  hashId,
-  sampleType,
-  DNASequenceFiles,
-  MolecularMarkers,
-  location,
-  DAPC,
-}: Sample) {
+import Link from "next/link";
+export default function SampleCard({ sample }: { sample: Sample }) {
+  const { hashId, sampleType, DNASequenceFiles, MolecularMarkers, location } =
+    sample;
   const map = useMap();
-  const handleClick = (location: any) => {
+  const handleClick = () => {
     if (!location) return;
-    console.log("breguete clicado:", location.toString());
+    console.log("Sample card clicado:", location.toString());
+
     map?.panTo(location);
+    map?.setZoom(12);
   };
 
   return (
-    <div
-      className="h-[10rem] p-3.5 bg-white rounded-[5px] border border-[#cccccc] flex-col gap-3.5 inline-flex"
-      onClick={() => handleClick(location)}
+    <Link
+      href={`/biodiversity-samples/${hashId}`}
+      className="p-3.5 w-full min-w-[15rem] bg-white rounded-[5px] border border-[#cccccc] hover:shadow-md cursor-pointer transition-all"
+      onClick={handleClick}
     >
-      <div className="self-stretch h-[88px] flex-col justify-start items-start flex">
+      <header>
         <h4 className="text-base font-semibold">Biodiversity Sample</h4>
         <small className="opacity-60 text-sm">{hashId}</small>
-      </div>
+      </header>
       <div className="pt-3.5 border-t border-[#e6e6e6] justify-start items-start gap-1 flex flex-wrap">
         <Badge variant="secondary">{sampleType} Sample</Badge>
         <Badge variant="secondary">{DNASequenceFiles.length} DNA Files</Badge>
@@ -34,12 +33,7 @@ export default function SampleCard({
             {marker}
           </Badge>
         ))}
-        {DAPC.map((group, index) => (
-          <Badge key={index} variant="secondary">
-            {Object.keys(group)[0]}
-          </Badge>
-        ))}
       </div>
-    </div>
+    </Link>
   );
 }

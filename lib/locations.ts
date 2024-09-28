@@ -1,4 +1,4 @@
-const samples: Sample[] = [
+const sampleList: Sample[] = [
   {
     hashId: "sample1",
     sampleType: "Water",
@@ -131,4 +131,4 @@ const samples: Sample[] = [
   },
 ];
 
-export default samples;
+export default sampleList;

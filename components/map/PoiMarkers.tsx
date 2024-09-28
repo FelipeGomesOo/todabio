@@ -1,20 +1,23 @@
 "use client";
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import { AdvancedMarker, Pin, useMap } from "@vis.gl/react-google-maps";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
 
 const PoiMarkers = (props: { pois: Sample[] }) => {
   const map = useMap();
+  const router = useRouter();
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
   const clusterer = useRef<MarkerClusterer | null>(null);
   const handleClick = useCallback(
-    (ev: google.maps.MapMouseEvent) => {
+    (ev: google.maps.MapMouseEvent, hashId: string) => {
       if (!map) return;
       if (!ev.latLng) return;
       console.log("marker clicked:", ev.latLng.toString());
       console.log("markers:", markers);
       map.panTo(ev.latLng);
+      router.push(`/biodiversity-samples/${hashId}`);
     },
     [map]
   );
@@ -56,7 +59,7 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
           position={poi.location}
           ref={(marker) => setMarkerRef(marker, poi.hashId)}
           clickable={true}
-          onClick={handleClick}
+          onClick={(ev) => handleClick(ev, poi.hashId)}
         >
           <Pin
             background={"#FBBC04"}
