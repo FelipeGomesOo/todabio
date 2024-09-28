@@ -4,8 +4,10 @@ import {
   Map,
   MapCameraChangedEvent,
 } from "@vis.gl/react-google-maps";
-import locations from "@/lib/locations";
+import samples from "@/lib/locations";
 import PoiMarkers from "@/components/map/PoiMarkers";
+import { MarkerProvider } from "@/context/MarkerContext";
+import Sidebar from "@/components/map/Sidebar";
 export default async function TodabioMap({
   API_KEY,
   mapId,
@@ -14,25 +16,25 @@ export default async function TodabioMap({
   mapId: string;
 }) {
   return (
-    <APIProvider apiKey={API_KEY}>
-      <Map
-        mapId={mapId}
-        style={{ width: "100vw", height: "100vh" }}
-        defaultCenter={{ lat: -33.860664, lng: 151.208138 }}
-        defaultZoom={13}
-        gestureHandling={"greedy"}
-        disableDefaultUI={true}
-        onCameraChanged={(ev: MapCameraChangedEvent) =>
-          console.log(
-            "camera changed:",
-            ev.detail.center,
-            "zoom:",
-            ev.detail.zoom
-          )
-        }
-      >
-        <PoiMarkers pois={locations} />
-      </Map>
-    </APIProvider>
+    <Map
+      mapId={mapId}
+      style={{ flexGrow: 1 }}
+      defaultCenter={{ lat: -1.4558, lng: -48.4902 }}
+      defaultZoom={5}
+      gestureHandling={"greedy"}
+      disableDefaultUI={true}
+      onCameraChanged={(ev: MapCameraChangedEvent) =>
+        console.log(
+          "camera changed:",
+          ev.detail.center,
+          "zoom:",
+          ev.detail.zoom
+        )
+      }
+    >
+      <MarkerProvider>
+        <PoiMarkers pois={samples} />
+      </MarkerProvider>
+    </Map>
   );
 }
