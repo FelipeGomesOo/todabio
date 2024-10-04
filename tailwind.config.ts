@@ -69,6 +69,24 @@ const config: Config = {
       "5xl": "4.5rem", // 72px
       "6xl": "5.75rem", // 72px
     },
+    colors: {
+      primary: {
+        light: "#717c82",
+        DEFAULT: "#53565a",
+        dark: "#000000",
+      },
+      chart: {
+        lightGreen: "#BBFF00",
+        darkGreen: "#5FB456",
+        cyan: "#00F3EB",
+        blue: "#3355FF",
+        purple: "#DA21FF",
+        pink: "#FF00AA",
+        red: "#FF0000",
+        orange: "#FF7300",
+        yellow: "#FFE800",
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
