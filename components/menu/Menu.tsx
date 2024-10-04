@@ -15,13 +15,13 @@ import MobileMenu from "@/components/menu/MobileMenu";
 
 export default function Menu() {
   return (
-    <nav className="bg-white shadow px-4">
+    <nav className="bg-white shadow px-10">
       <div className="flex justify-between items-center h-16">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logotipo-todabio-site.svg"
             alt="Logo"
-            width={130}
+            width={140}
             height={25.68}
           />
         </Link>
