@@ -24,13 +24,13 @@ export default function BiodiversitySamplePage({
   } = sample;
 
   const similaBiodiversitySamples = sampleList;
-  console.log("similaBiodiversitySamples", similaBiodiversitySamples);
+  //console.log("similaBiodiversitySamples", similaBiodiversitySamples);
   const locationString = `${location.lat},${location.lng}`;
 
   return (
-    <div className="w-full overflow-hidden flex-col gap-9 flex ">
-      <header className="gap-8 inline-flex items-center">
-        <div className="w-[75px] h-[75px]  bg-white rounded-[90px]">
+    <div className="w-full overflow-hidden flex-col gap-9 flex py-4">
+      <header className="gap-6 inline-flex items-center">
+        <div className="w-16 h-16  bg-white rounded-[90px]">
           <Image
             src="/icons/cylinder.svg"
             alt="Cylinder icon"
@@ -38,11 +38,10 @@ export default function BiodiversitySamplePage({
             height={75}
           />
         </div>
-        <div className="grow shrink basis-0 ">
-          <h2 className="text-2xl">Biodiversity Sample</h2>
+        <div className="grow ">
+          <h2 className="text-xl font-bold">{hashId}</h2>
           <div className="self-stretch justify-start items-start gap-1 inline-flex">
-            <strong className="opacity-60 text-base ">Hash ID</strong>
-            <div className=" opacity-60 text-base ">{hashId}</div>
+            <div className=" opacity-60">Biodiversity Sample</div>
           </div>
         </div>
       </header>
@@ -85,7 +84,7 @@ export default function BiodiversitySamplePage({
         </TableBody>
       </Table>
       <section>
-        <h3 className="text-2xl font-semibold ">
+        <h3 className="text-lg font-semibold ">
           Similar biodiversity profiles
         </h3>
         <div className="overflow-auto  w-full">
@@ -103,12 +102,12 @@ export default function BiodiversitySamplePage({
         </div>
       </section>
       <section>
-        <h3 className="text-2xl font-semibold ">DNA Sequence Files</h3>
-        <div className="self-stretch text-base font-normal  ">
+        <h3 className="text-lg font-semibold ">DNA Sequence Files</h3>
+        <p className="text-sm font-normal  ">
           Each entry links to an original FASTQ sequencing file, accompanied by
           an F5 file, a SHA-256 hash, geolocation data, and a collection
           timestamp.
-        </div>
+        </p>
         <div className="overflow-auto  w-full">
           <div className="flex gap-4  py-4">
             {similaBiodiversitySamples && (
@@ -124,13 +123,13 @@ export default function BiodiversitySamplePage({
                           height={75}
                         />
                       </div>
-                      <div className="self-stretch h-12 flex-col justify-start items-start flex">
-                        <div className="w-[155px] text-base font-semibold  ">
+                      <div className=" ">
+                        <h4 className="w-[155px] text-sm font-semibold  ">
                           DNA Sequence
-                        </div>
-                        <div className="self-stretch opacity-60 text-sm font-normal  leading-tight">
+                        </h4>
+                        <p className="opacity-60 text-sm leading-tight">
                           File 03
-                        </div>
+                        </p>
                       </div>
                     </div>
                   )
