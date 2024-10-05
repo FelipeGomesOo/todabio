@@ -1,7 +1,8 @@
-import sampleList from "@/lib/locations";
+import useSampleList from "@/hooks/useSampleList";
 import SampleCard from "@/components/ui/sampleCard";
 
 export default function Home() {
+  const sampleList = useSampleList();
   return (
     <>
       <div className=" w-full flex-col gap-9 flex">

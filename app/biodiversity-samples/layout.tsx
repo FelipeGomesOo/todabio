@@ -2,7 +2,7 @@
 import TodabioMap from "@/components/map/Map";
 import { Suspense } from "react";
 import { APIProvider } from "@vis.gl/react-google-maps";
-import sampleList from "@/lib/locations";
+import useSampleList from "@/hooks/useSampleList";
 
 export default function MapLayout({
   children,
@@ -11,7 +11,7 @@ export default function MapLayout({
 }>) {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API ?? "";
   const mapId = process.env.NEXT_PUBLIC_MAP_ID ?? "";
-
+  const sampleList = useSampleList();
   return (
     <>
       <APIProvider apiKey={API_KEY}>

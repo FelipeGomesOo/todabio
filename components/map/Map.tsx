@@ -1,9 +1,5 @@
 "use client";
-import {
-  APIProvider,
-  Map,
-  MapCameraChangedEvent,
-} from "@vis.gl/react-google-maps";
+import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
 export default async function TodabioMap({
   mapId,

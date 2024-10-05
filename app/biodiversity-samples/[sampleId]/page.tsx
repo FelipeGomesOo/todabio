@@ -1,27 +1,23 @@
-import sampleList from "@/lib/locations";
+import useSampleList from "@/hooks/useSampleList";
 import { Badge } from "@/components/ui/badge";
-import { formatDate } from "@/lib/utils";
+import { formatDate, currentMarker } from "@/lib/utils";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import SampleCard from "@/components/ui/sampleCard";
 import Image from "next/image";
+import GroupChart from "@/components/map/GroupChart";
 
 export default function BiodiversitySamplePage({
   params,
 }: {
   params: { sampleId: Sample["hashId"] };
 }) {
+  const sampleList = useSampleList();
   const sample = sampleList.find((sample) => sample.hashId === params.sampleId);
   if (!sample) {
     return <div>Sample not found</div>;
   }
-  const {
-    hashId,
-    sampleType,
-    DNASequenceFiles,
-    MolecularMarkers,
-    location,
-    CollectionDate,
-  } = sample;
+  const { hashId, sampleType, Sample_Markers, location, CollectionDate } =
+    sample;
 
   const similaBiodiversitySamples = sampleList;
   //console.log("similaBiodiversitySamples", similaBiodiversitySamples);
@@ -54,12 +50,6 @@ export default function BiodiversitySamplePage({
             </TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>DNA Files</TableCell>
-            <TableCell className="text-right">
-              <Badge variant="secondary">{DNASequenceFiles.length}</Badge>
-            </TableCell>
-          </TableRow>
-          <TableRow>
             <TableCell>Coordinates</TableCell>
             <TableCell className="text-right">
               <Badge variant="secondary">{locationString}</Badge>
@@ -67,8 +57,8 @@ export default function BiodiversitySamplePage({
           </TableRow>
           <TableRow>
             <TableCell>Molecular markers</TableCell>
-            <TableCell className="text-right">
-              {MolecularMarkers.map((marker, index: number) => (
+            <TableCell className="text-right flex gap-1 justify-end">
+              {Object.keys(Sample_Markers).map((marker, index) => (
                 <Badge key={index} variant="secondary">
                   {marker}
                 </Badge>
@@ -83,6 +73,18 @@ export default function BiodiversitySamplePage({
           </TableRow>
         </TableBody>
       </Table>
+      <div className="h-[432px] flex-col justify-start items-start gap-8 inline-flex">
+        <div className="self-stretch h-28 flex-col justify-start items-start gap-2 flex">
+          <div className="text-black text-xl font-normal font-['PT Mono'] leading-loose">
+            Sample Origin - DAPC
+          </div>
+          <div className="self-stretch text-base font-normal font-['PT Mono'] leading-normal">
+            We use DAPC to verify this sample's origin. Each color represents
+            its likelihood of belonging to one of the analyzed groups.
+          </div>
+        </div>
+        <GroupChart marker={Sample_Markers[currentMarker]} />
+      </div>
       <section>
         <h3 className="text-lg font-semibold ">
           Similar biodiversity profiles

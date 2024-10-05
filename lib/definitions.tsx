@@ -6,17 +6,26 @@ type DAPCGroup = {
   [key: string]: number;
 };
 
+type SampleMarker = {
+  DAPC: DAPCGroup;
+  files: { [key: string]: DNASequenceFile };
+};
+
+type SampleMarkers = {
+  [marker: string]: SampleMarker;
+};
+
 type Sample = {
   hashId: string;
   sampleType: string;
   location: google.maps.LatLngLiteral;
-  DNASequenceFiles: DNASequenceFile[];
-  MolecularMarkers: string[];
+  DNASequenceFiles: { [key: string]: DNASequenceFile };
   CollectionDate: string;
   creditId: Credit["hashId"];
-  DAPC: DAPCGroup[];
+  depth: string;
+  DNA_Concentration: number;
+  Sample_Markers: SampleMarkers;
 };
-
 type Credit = {
   hashId: string;
   coverArea: string;
