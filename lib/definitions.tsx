@@ -1,30 +1,30 @@
-type DNASequenceFile = {
-  url: string;
-};
-
-type DAPCGroup = {
+type DAPC = {
   [key: string]: number;
 };
 
 type SampleMarker = {
-  DAPC: DAPCGroup;
-  files: { [key: string]: DNASequenceFile };
-};
-
-type SampleMarkers = {
-  [marker: string]: SampleMarker;
+  Name: string;
+  FASTQ_ID_Sequence_Provider: string;
+  URL_FASTQ_Forward: string;
+  URL_FASTQ_Reverse: string;
+  SHA256_Forward: string;
+  SHA256_Reverse: string;
+  SHA256_fastaASV: string;
+  URL_fastaASV: string;
+  qPCR_nM: number;
+  Pipeline_Log: string;
+  DAPC: DAPC;
 };
 
 type Sample = {
   hashId: string;
   sampleType: string;
   location: google.maps.LatLngLiteral;
-  DNASequenceFiles: { [key: string]: DNASequenceFile };
   CollectionDate: string;
   creditId: Credit["hashId"];
   depth: string;
   DNA_Concentration: number;
-  Sample_Markers: SampleMarkers;
+  Sample_Markers: SampleMarker[];
 };
 type Credit = {
   hashId: string;

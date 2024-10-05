@@ -10,11 +10,9 @@ export function formatDate(dateString: string) {
   return `${day}/${month}/${year}`;
 }
 
-export function getMaxGroup(markerData: { [key: string]: number }) {
-  return Object.keys(markerData).reduce((maxGroup, currentGroup) => {
-    return markerData[currentGroup] > markerData[maxGroup]
-      ? currentGroup
-      : maxGroup;
+export function getMaxGroup(dapc: { [key: string]: number }) {
+  return Object.keys(dapc).reduce((maxGroup, currentGroup) => {
+    return dapc[currentGroup] > dapc[maxGroup] ? currentGroup : maxGroup;
   });
 }
 
@@ -64,18 +62,12 @@ export const groupColors: {
   },
 };
 
-export const currentMarker = "COI";
-
-type DAPCData = {
-  [key: string]: number; // Define um tipo para os dados de entrada
-};
+export const currentMarker = "12S";
 
 type NormalizedValues = {
-  [key: string]: [number, number]; // Define um tipo para os valores normalizados
+  [key: string]: [number, number];
 };
-export const getValuesWithNormalization = (
-  data: DAPCData
-): NormalizedValues => {
+export const getValuesWithNormalization = (data: DAPC): NormalizedValues => {
   const maxValue = Math.max(...Object.values(data)); // Encontra o valor máximo
   const result: NormalizedValues = {}; // Cria um objeto para armazenar os resultados
 
@@ -95,3 +87,30 @@ export const getValuesWithNormalization = (
 
   return orderedNormalizedValues; // Retorna o objeto resultante ordenado
 };
+export function similarSamples(
+  samples: Sample[],
+  marker: string,
+  largestGroup: string
+): Sample[] {
+  const similarSamples: Sample[] = [];
+
+  samples.forEach((sample) => {
+    const sampleMarkers = sample.Sample_Markers;
+
+    sampleMarkers.forEach((sampleMarker) => {
+      if (sampleMarker.Name === marker) {
+        const dapcValue = sampleMarker.DAPC[largestGroup];
+
+        const isLargest = Object.values(sampleMarker.DAPC).every(
+          (value) => value <= dapcValue
+        );
+
+        if (isLargest) {
+          similarSamples.push(sample);
+        }
+      }
+    });
+  });
+
+  return similarSamples;
+}

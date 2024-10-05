@@ -2,7 +2,7 @@ import { groupColors, getValuesWithNormalization } from "@/lib/utils";
 export default function GroupChart({ marker }: { marker: SampleMarker }) {
   const data = getValuesWithNormalization(marker.DAPC);
   return (
-    <div className="self-stretch h-72 border-t border-[#cccccc] flex-col justify-start items-start flex">
+    <div className="self-stretch border-t border-[#cccccc] flex-col justify-start items-start flex">
       {Object.entries(data).map(([key, value]) => (
         <div
           key={key}

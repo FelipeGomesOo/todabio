@@ -1,9 +1,7 @@
 import Samples from "@/lib/locations";
 
 const useSamples = () => {
-  const sampleList: Sample[] = Object.keys(Samples).map((key) => ({
-    ...Samples[key],
-  }));
+  const sampleList: Sample[] = Samples;
 
   return sampleList;
 };

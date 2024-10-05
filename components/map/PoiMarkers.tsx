@@ -63,7 +63,10 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
           onClick={(ev) => handleClick(ev, poi.hashId)}
         >
           <Point
-            grouping={getMaxGroup(poi.Sample_Markers[currentMarker].DAPC)}
+            grouping={getMaxGroup(
+              poi.Sample_Markers.find((marker) => marker.Name === currentMarker)
+                ?.DAPC || {}
+            )}
           />
         </AdvancedMarker>
       ))}

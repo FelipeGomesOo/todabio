@@ -16,19 +16,19 @@ export default function SampleCard({ sample }: { sample: Sample }) {
   return (
     <Link
       href={`/biodiversity-samples/${hashId}`}
-      className="p-3.5 w-full min-w-[15rem] bg-white rounded-[5px] border border-[#cccccc] hover:shadow-md cursor-pointer transition-all"
+      className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border border-[#cccccc] hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
       onClick={handleClick}
     >
       <header>
-        <h4 className="text-base font-semibold">Biodiversity Sample</h4>
-        <small className="opacity-60 text-sm">{hashId}</small>
+        <h4 className="text-base font-semibold">{hashId}</h4>
+        <small className="opacity-60 text-sm">Biodiversity Sample</small>
       </header>
-      <div className="pt-3.5 border-t border-[#e6e6e6] justify-start items-start gap-1 flex flex-wrap">
+      <div className="justify-start items-start gap-1 flex flex-wrap">
         <Badge variant="secondary">{sampleType} Sample</Badge>
 
-        {Object.keys(Sample_Markers).map((marker, index) => (
+        {Sample_Markers.map((SampleMarker, index) => (
           <Badge key={index} variant="secondary">
-            {marker}
+            {SampleMarker.Name}
           </Badge>
         ))}
       </div>
