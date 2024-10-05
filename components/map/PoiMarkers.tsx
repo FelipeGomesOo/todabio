@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { AdvancedMarker, Pin, useMap } from "@vis.gl/react-google-maps";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
+import Point from "@/components/map/Point";
+import { getMaxGroup, currentMarker } from "@/lib/utils";
 
 const PoiMarkers = (props: { pois: Sample[] }) => {
   const map = useMap();
@@ -50,7 +52,6 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
       }
     });
   };
-
   return (
     <>
       {props.pois.map((poi: Sample) => (
@@ -61,10 +62,8 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
           clickable={true}
           onClick={(ev) => handleClick(ev, poi.hashId)}
         >
-          <Pin
-            background={"#FBBC04"}
-            glyphColor={"#000"}
-            borderColor={"#000"}
+          <Point
+            grouping={getMaxGroup(poi.Sample_Markers[currentMarker].DAPC)}
           />
         </AdvancedMarker>
       ))}

@@ -3,8 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { useMap } from "@vis.gl/react-google-maps";
 import Link from "next/link";
 export default function SampleCard({ sample }: { sample: Sample }) {
-  const { hashId, sampleType, DNASequenceFiles, MolecularMarkers, location } =
-    sample;
+  const { hashId, sampleType, Sample_Markers, location } = sample;
   const map = useMap();
   const handleClick = () => {
     if (!location) return;
@@ -26,9 +25,8 @@ export default function SampleCard({ sample }: { sample: Sample }) {
       </header>
       <div className="pt-3.5 border-t border-[#e6e6e6] justify-start items-start gap-1 flex flex-wrap">
         <Badge variant="secondary">{sampleType} Sample</Badge>
-        <Badge variant="secondary">{DNASequenceFiles.length} DNA Files</Badge>
 
-        {MolecularMarkers.map((marker, index) => (
+        {Object.keys(Sample_Markers).map((marker, index) => (
           <Badge key={index} variant="secondary">
             {marker}
           </Badge>
