@@ -5,9 +5,13 @@ import { AdvancedMarker, Pin, useMap } from "@vis.gl/react-google-maps";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
 import Point from "@/components/map/Point";
-import { getMaxGroup, currentMarker } from "@/lib/utils";
-
+import { getMaxGroup } from "@/lib/utils";
+import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
 const PoiMarkers = (props: { pois: Sample[] }) => {
+  const currentGlobalMarker = useCurrentGlobalMarker();
+  const markerString = currentGlobalMarker
+    ? `?marker=${currentGlobalMarker}`
+    : "";
   const map = useMap();
   const router = useRouter();
   const [markers, setMarkers] = useState<{ [key: string]: Marker }>({});
@@ -19,7 +23,7 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
       console.log("marker clicked:", ev.latLng.toString());
       console.log("markers:", markers);
       map.panTo(ev.latLng);
-      router.push(`/biodiversity-samples/${hashId}`);
+      router.push(`/biodiversity-samples/${hashId}${markerString}`);
     },
     [map]
   );
@@ -64,8 +68,9 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
         >
           <Point
             grouping={getMaxGroup(
-              poi.Sample_Markers.find((marker) => marker.Name === currentMarker)
-                ?.DAPC || {}
+              poi.Sample_Markers.find(
+                (marker) => marker.Name === currentGlobalMarker
+              )?.DAPC || {}
             )}
           />
         </AdvancedMarker>

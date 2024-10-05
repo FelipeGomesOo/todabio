@@ -2,7 +2,13 @@
 import { Badge } from "@/components/ui/badge";
 import { useMap } from "@vis.gl/react-google-maps";
 import Link from "next/link";
-export default function SampleCard({ sample }: { sample: Sample }) {
+export default function SampleCard({
+  sample,
+  currentMarker,
+}: {
+  sample: Sample;
+  currentMarker?: string;
+}) {
   const { hashId, sampleType, Sample_Markers, location } = sample;
   const map = useMap();
   const handleClick = () => {
@@ -12,10 +18,11 @@ export default function SampleCard({ sample }: { sample: Sample }) {
     map?.panTo(location);
     map?.setZoom(12);
   };
+  const markerString = currentMarker ? `?marker=${currentMarker}` : "";
 
   return (
     <Link
-      href={`/biodiversity-samples/${hashId}`}
+      href={`/biodiversity-samples/${hashId}${markerString}`}
       className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border border-[#cccccc] hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
       onClick={handleClick}
     >
