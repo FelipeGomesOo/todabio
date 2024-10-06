@@ -1,7 +1,7 @@
 "use client";
 import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
-import ContextualMenu from "./ContextualMenu";
+import ContextualMenu from "@/components/map/ContextualMenu";
 export default async function TodabioMap({
   mapId,
   sampleList,
