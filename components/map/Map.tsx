@@ -1,7 +1,7 @@
 "use client";
 import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
-import { FilterByMarker } from "./FilterByMarker";
+import ContextualMenu from "./ContextualMenu";
 export default async function TodabioMap({
   mapId,
   sampleList,
@@ -26,11 +26,7 @@ export default async function TodabioMap({
         )
       }
     >
-      <div className="absolute top-0 left-0 p-4  w-full">
-        <div className="p-2 px-6 bg-primary-light/10  rounded-full">
-          <FilterByMarker />
-        </div>
-      </div>
+      <ContextualMenu />
       <PoiMarkers pois={sampleList} />
     </Map>
   );

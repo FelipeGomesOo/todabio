@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
 
-export function FilterByMarker() {
+export default function FilterByMarker() {
   const [position, setPosition] = React.useState("bottom");
   const router = useRouter();
   const pathname = usePathname();
