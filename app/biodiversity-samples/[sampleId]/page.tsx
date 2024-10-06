@@ -21,9 +21,9 @@ export default function BiodiversitySamplePage({
   const locationString = `${location.lat},${location.lng}`;
 
   return (
-    <div className="w-full overflow-hidden flex-col gap-9 flex py-4">
-      <header className="gap-6 inline-flex items-center">
-        <div className="w-16 h-16  bg-white rounded-[90px]">
+    <div className="w-full overflow-hidden flex-col gap-8 flex items-start justify-start py-4">
+      <header className="gap-4 w-full flex flex-col items-start justify-start">
+        <div className="w-16 h-16 bg-secondary border-primary border-2 rounded-[90px]">
           <Image
             src="/icons/cylinder.svg"
             alt="Cylinder icon"
@@ -31,35 +31,34 @@ export default function BiodiversitySamplePage({
             height={75}
           />
         </div>
-        <div className="grow ">
-          <h2 className="text-xl font-bold">{hashId}</h2>
-          <div className="self-stretch justify-start items-start gap-1 inline-flex">
-            <div className=" opacity-60">Biodiversity Sample</div>
-          </div>
+        <div className=" flex-col gap-0 inline-flex   ">
+          <h2 className="text-base font-bold font-sans">{hashId}</h2>
+          <p className="text-base text-primary/70">Biodiversity Sample</p>
         </div>
+
+        <Table className="border-t ">
+          <TableBody>
+            <TableRow>
+              <TableCell>Sample Type</TableCell>
+              <TableCell className="text-right">
+                <Badge variant="secondary">{sampleType}</Badge>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Coordinates</TableCell>
+              <TableCell className="text-right">
+                <Badge variant="secondary">{locationString}</Badge>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Date of collection</TableCell>
+              <TableCell className="text-right">
+                <Badge variant="secondary">{formatDate(CollectionDate)}</Badge>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
       </header>
-      <Table className="border-t border-[#cccccc]">
-        <TableBody>
-          <TableRow>
-            <TableCell>Sample Type</TableCell>
-            <TableCell className="text-right">
-              <Badge variant="secondary">{sampleType}</Badge>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Coordinates</TableCell>
-            <TableCell className="text-right">
-              <Badge variant="secondary">{locationString}</Badge>
-            </TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Date of collection</TableCell>
-            <TableCell className="text-right">
-              <Badge variant="secondary">{formatDate(CollectionDate)}</Badge>
-            </TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
       <SampleMarkersTabs Sample_Markers={Sample_Markers} />
     </div>
   );

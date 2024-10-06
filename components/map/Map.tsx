@@ -2,6 +2,7 @@
 import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
 import ContextualMenu from "@/components/map/ContextualMenu";
+import MapSubtitles from "./MapSubtitles";
 export default async function TodabioMap({
   mapId,
   sampleList,
@@ -27,6 +28,7 @@ export default async function TodabioMap({
       }
     >
       <ContextualMenu />
+      <MapSubtitles />
       <PoiMarkers pois={sampleList} />
     </Map>
   );

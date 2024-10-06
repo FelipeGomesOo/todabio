@@ -5,8 +5,8 @@ type Props = {};
 
 export default function ContextualMenu({}: Props) {
   return (
-    <div className="absolute top-0 left-0 p-4  w-full">
-      <div className="p-2 px-6 bg-transparent flex justify-end gap-2  ">
+    <div className="absolute top-4 right-4">
+      <div className="bg-transparent flex justify-end gap-2  ">
         <FilterByMarker />
         <SearchMap />
       </div>

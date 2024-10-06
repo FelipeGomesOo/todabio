@@ -4,7 +4,7 @@ import { Badge, badgeVariants } from "@/components/ui/badge";
 import { similarSamples, getMaxGroup } from "@/lib/utils";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import SampleCard from "@/components/ui/sampleCard";
+import SampleCard from "@/components/map/sampleCard";
 import GroupChart from "@/components/map/GroupChart";
 import Link from "next/link";
 import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
@@ -18,30 +18,21 @@ export default function SampleMarkersTabs({
   const sampleList = useSampleList();
   return (
     <Tabs defaultValue={currentGlobalMarker} className="w-full">
-      <TabsList>
-        {Sample_Markers.map((SampleMarker, index) => (
-          <TabsTrigger key={index} value={SampleMarker.Name}>
-            {SampleMarker.Name}
-          </TabsTrigger>
-        ))}
-      </TabsList>
+      <section className="flex items-center justify-between">
+        <h3 className="text-sm font-bold font-sans">Sample Markers</h3>
+        <TabsList>
+          {Sample_Markers.map((SampleMarker, index) => (
+            <TabsTrigger key={index} value={SampleMarker.Name}>
+              {SampleMarker.Name}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </section>
       {Sample_Markers.map((SampleMarker, index) => (
         <TabsContent key={index} value={SampleMarker.Name}>
-          <section className="  flex flex-col  gap-8 ">
-            <Table className="border-t border-[#cccccc]">
+          <section className="flex flex-col gap-8 ">
+            <Table className="border-t">
               <TableBody>
-                <TableRow>
-                  <TableCell>Molecular marker</TableCell>
-                  <TableCell className="text-right flex gap-1 justify-end">
-                    <Badge variant="secondary">{SampleMarker.Name}</Badge>
-                  </TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>qPCR</TableCell>
-                  <TableCell className="text-right flex gap-1 justify-end">
-                    <Badge variant="secondary">{SampleMarker.qPCR_nM} nM</Badge>
-                  </TableCell>
-                </TableRow>
                 <TableRow>
                   <TableCell>FASTQ ID</TableCell>
                   <TableCell className="text-right flex gap-1 justify-end">
@@ -143,21 +134,22 @@ export default function SampleMarkersTabs({
                 </TableRow>
               </TableBody>
             </Table>
-            <section className="flex flex-col justify-start items-start gap-4 ">
-              <h3 className="text-base leading-loose">
-                Sample Origin - DAPC - {SampleMarker.Name}
+            <section className="inline-flex flex-col gap-4">
+              <h3 className="text-sm font-bold font-sans flex  justify-between w-full items-center">
+                Sample Origin - DAPC
+                <Badge variant="secondary">{SampleMarker.Name} </Badge>
               </h3>
-
               <GroupChart marker={SampleMarker} />
-              <p className="text-sm">
+              <p className="text-xs">
                 We use DAPC to verify this sample's origin. Each color
                 represents its likelihood of belonging to one of the analyzed
                 groups.
               </p>
             </section>
             <section>
-              <h3 className="text-base font-semibold ">
-                {SampleMarker.Name} Similar biodiversity profiles
+              <h3 className="text-sm font-bold font-sans flex  justify-between w-full items-center">
+                Similar Biodiversity Profiles
+                <Badge variant="secondary">{SampleMarker.Name} </Badge>
               </h3>
               <div className="overflow-auto w-full">
                 <div className="flex gap-2 py-4">
@@ -224,7 +216,6 @@ export default function SampleMarkersTabs({
           </section>
         </TabsContent>
       ))}
-      ;
     </Tabs>
   );
 }

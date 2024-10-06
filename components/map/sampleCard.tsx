@@ -23,12 +23,12 @@ export default function SampleCard({
   return (
     <Link
       href={`/biodiversity-samples/${hashId}${markerString}`}
-      className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border border-[#cccccc] hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
+      className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border   hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
       onClick={handleClick}
     >
       <header>
-        <h4 className="text-base font-semibold">{hashId}</h4>
-        <small className="opacity-60 text-sm">Biodiversity Sample</small>
+        <h4 className="text-sm font-bold">{hashId}</h4>
+        <small className="text-sm text-primary/70">Biodiversity Sample</small>
       </header>
       <div className="justify-start items-start gap-1 flex flex-wrap">
         <Badge variant="secondary">{sampleType} Sample</Badge>

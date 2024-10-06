@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Manrope, PT_Mono } from "next/font/google";
 import "./globals.css";
 import Menu from "@/components/menu/Menu";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const ptMono = PT_Mono({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-pt-mono",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-screen`}
+        className={`${ptMono.variable} ${manrope.variable} antialiased flex flex-col h-screen`}
       >
         <Menu />
-        <main className="flex-1 flex">{children}</main>
+        <main className=" font-mono flex-1 flex">{children}</main>
       </body>
     </html>
   );

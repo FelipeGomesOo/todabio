@@ -6,23 +6,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 /* width */
-::-webkit-scrollbar {
+.mapHolder ::-webkit-scrollbar {
   width: 6px;
   height: 10px;
 }
 /* Track */
-::-webkit-scrollbar-track {
+.mapHolder ::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.mapHolder ::-webkit-scrollbar-thumb {
   background: #ebebeb;
   border-radius: 10px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.mapHolder ::-webkit-scrollbar-thumb:hover {
   background: #b3b3b3;
   cursor: grab;
 }
@@ -34,23 +34,32 @@ body {
 
 @layer base {
   :root {
+    --GreenScream100: 76, 100%, 50%;
+    --GreenScream200: 110, 100%, 61%;
+    --GreenScream300: 130, 100%, 42%;
+    --BlueMoon100: 230, 100%, 60%;
+    --BlueMoon200: 205, 100%, 18%;
+    --BlueMoon300: 97, 35%, 7%;
+    --Cream100: 72, 17%, 94%;
+    --Cream200: 64, 21%, 87%;
+
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: var(--BlueMoon300);
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
+    --primary-foreground: var(--BlueMoon300);
+    --secondary: var(--Cream100);
+    --secondary-foreground: var(--BlueMoon300);
+    --muted: var(--Cream100);
     --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: var(--GreenScream100);
+    --accent-foreground: var(--BlueMoon300);
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
+    --border: var(--Cream200);
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --chart-1: 12 76% 61%;
@@ -61,8 +70,8 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: var(--BlueMoon300);
+    --foreground: var(--Cream100);
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
