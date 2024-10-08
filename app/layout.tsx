@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${ptMono.variable} ${manrope.variable} antialiased flex flex-col h-screen`}
       >
         <Menu />
-        <main className=" font-mono flex-1 flex">{children}</main>
+        <main className="font-mono flex-1 flex flex-col">{children}</main>
       </body>
     </html>
   );
