@@ -114,3 +114,86 @@ export function similarSamples(
 
   return similarSamples;
 }
+
+type DataPoint = string[]; // Define o tipo para cada ponto de dados, que é um array de strings
+
+interface Result {
+  depths: number[]; // Um array de profundidades numéricas
+  maxIterations: number; // A quantidade máxima de iterações
+}
+
+export function extractDepthsAndIterations(input: DataPoint[]): Result {
+  //console.log("input", input);
+  const headers = input[0]; // O primeiro array que contém os cabeçalhos
+  const depths: number[] = [];
+  const depthIterations: Record<number, number> = {}; // Um objeto para contar iterações por profundidade
+
+  // Percorre os cabeçalhos, começando do índice 1 (excluindo "sample-id")
+  for (let i = 1; i < headers.length; i++) {
+    const header = headers[i];
+
+    // Extrai a profundidade do cabeçalho usando regex
+    const depthMatch = header.match(/depth-(\d+)_iter-\d+/);
+    if (depthMatch) {
+      const depth = Number(depthMatch[1]);
+
+      // Adiciona a profundidade ao array, se ainda não estiver presente
+      if (!depths.includes(depth)) {
+        depths.push(depth);
+      }
+
+      // Atualiza a contagem de iterações para a profundidade
+      if (!depthIterations[depth]) {
+        depthIterations[depth] = 0;
+      }
+      depthIterations[depth]++;
+    }
+  }
+
+  // Encontra a quantidade máxima de iterações
+  const maxIterations = Math.max(...Object.values(depthIterations));
+
+  return {
+    depths,
+    maxIterations,
+  };
+}
+
+export function getSampleValues(
+  input: DataPoint[],
+  depths: any,
+  iterations: any
+) {
+  const last_key = depths.length * iterations;
+  const sampleValues = input[1].slice(1, last_key + 1);
+  const sampleValuesNumbers = convertArrayToNumbers(sampleValues);
+
+  console.log("sampleValuesNumbers", sampleValuesNumbers);
+  return sampleValuesNumbers;
+}
+
+export function getDataPoints(samples: any) {
+  let { depths, maxIterations } = extractDepthsAndIterations(samples);
+  //console.log("depths", depths);
+  //console.log("maxIterations", maxIterations);
+  let sampleValueArray = getSampleValues(samples, depths, maxIterations);
+  //console.log("sampleValueArray", sampleValueArray);
+  let dataPoints = [];
+
+  for (let i = 0; i < depths.length; i++) {
+    let sampleValues = sampleValueArray.slice(
+      i * maxIterations,
+      (i + 1) * maxIterations
+    );
+    dataPoints.push({ x: depths[i], y: sampleValues });
+  }
+
+  // console.log("dataPoints", dataPoints);
+  return dataPoints;
+}
+
+function convertArrayToNumbers(inputArray: (string | number)[]): number[] {
+  return inputArray
+    .map((item) => Number(item)) // Tenta converter cada item para número
+    .filter((num) => !isNaN(num)); // Filtra valores que não são números (NaN)
+}
