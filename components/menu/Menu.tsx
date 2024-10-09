@@ -24,6 +24,7 @@ export default function Menu() {
             alt="Logo"
             width={140}
             height={25.68}
+            priority
           />
         </Link>
         <div className="basis-8/12">
