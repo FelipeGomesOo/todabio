@@ -13,19 +13,14 @@ import Link from "next/link";
 import Image from "next/image";
 import MobileMenu from "@/components/menu/MobileMenu";
 import { buttonVariants } from "@/components/ui/button";
+import LogoTodabio from "../svg/LogoTodabio";
 
 export default function Menu() {
   return (
     <nav className="bg-white px-8 font-mono ">
       <div className="flex flex-row  items-center h-16 w-full">
         <Link href="/" className="shrink-0 basis-2/12">
-          <Image
-            src="/logotipo-todabio-site.svg"
-            alt="Logo"
-            width={140}
-            height={25.68}
-            priority
-          />
+          <LogoTodabio className="w-36 " />
         </Link>
         <div className="basis-8/12">
           <NavigationMenu className=" hidden md:block  ">
@@ -75,7 +70,7 @@ export default function Menu() {
         </div>
         <Link
           className={` basis-2/12 ${buttonVariants({ variant: "accent" })}`}
-          href="/biodiversity-samples"
+          href="/verifiable-biodiversity"
         >
           Verifiable biodiversity
         </Link>

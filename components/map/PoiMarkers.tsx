@@ -7,7 +7,7 @@ import type { Marker } from "@googlemaps/markerclusterer";
 import Point from "@/components/map/Point";
 import { getMaxGroup } from "@/lib/utils";
 import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
-const PoiMarkers = (props: { pois: Sample[] }) => {
+const PoiMarkers = (props: { pois: RegularSample[] }) => {
   const currentGlobalMarker = useCurrentGlobalMarker();
   const markerString = currentGlobalMarker
     ? `?marker=${currentGlobalMarker}`
@@ -23,7 +23,9 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
       console.log("marker clicked:", ev.latLng.toString());
       console.log("markers:", markers);
       map.panTo(ev.latLng);
-      router.push(`/biodiversity-samples/${hashId}${markerString}`);
+      router.push(
+        `/verifiable-biodiversity/biodiversity-samples/${hashId}${markerString}`
+      );
     },
     [map]
   );
@@ -58,18 +60,18 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
   };
   return (
     <>
-      {props.pois.map((poi: Sample) => (
+      {props.pois.map((poi: RegularSample) => (
         <AdvancedMarker
-          key={poi.hashId}
-          position={poi.location}
-          ref={(marker) => setMarkerRef(marker, poi.hashId)}
+          key={poi.Elabjournal_Sample_ID}
+          position={{ lat: poi.Sample_Latitude, lng: poi.Sample_Longitude }}
+          ref={(marker) => setMarkerRef(marker, poi.Elabjournal_Sample_ID)}
           clickable={true}
-          onClick={(ev) => handleClick(ev, poi.hashId)}
+          onClick={(ev) => handleClick(ev, poi.Elabjournal_Sample_ID)}
         >
           <Point
             grouping={getMaxGroup(
               poi.Sample_Markers.find(
-                (marker) => marker.Name === currentGlobalMarker
+                (marker) => marker.Marker === currentGlobalMarker
               )?.DAPC || {}
             )}
           />

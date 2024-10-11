@@ -2,40 +2,71 @@ type DAPC = {
   [key: string]: number;
 };
 
-type SampleMarker = {
-  Name: string;
+interface SampleMarker {
+  Marker: string;
+  FASTQ_Forward_URL: string;
+  SHA256_FASTQ_Forward: string;
+  FASTQ_Reverse_URL: string;
+  SHA256_FASTQ_Reverse: string;
+  FASTA_ASV_URL: string;
+  SHA256_FASTA_ASV: string;
+  Clean_FASTA_ASV_URL: string;
+  SHA256_Clean_FASTA_ASV: string;
+  FASTA_OTU_URL: string;
+  SHA256_FASTA_OTU: string;
+  Rarefaction_Curve_URL: string;
+  SHA256_Rarefaction_Curve: string;
+  Shannon: number;
+  Riqueza: number;
+  Equidade: number;
+  DAPC?: DAPC;
+}
+interface Sample {
+  "Depth_(m)": number | null | string;
+  Matrix: string;
+  Elabjournal_Sample_ID: string;
   FASTQ_ID_Sequence_Provider: string;
-  URL_FASTQ_Forward: string;
-  URL_FASTQ_Reverse: string;
-  SHA256_Forward: string;
-  SHA256_Reverse: string;
-  SHA256_fastaASV: string;
-  URL_fastaASV: string;
-  qPCR_nM: number;
-  Pipeline_Log: string;
-  DAPC: DAPC;
-};
-
-type Sample = {
-  hashId: string;
-  sampleType: string;
-  location: google.maps.LatLngLiteral;
-  CollectionDate: string;
-  creditId: Credit["hashId"];
-  depth: string;
-  DNA_Concentration: number;
+  Pipeline_01_Version: string;
   Sample_Markers: SampleMarker[];
-};
-type Credit = {
-  hashId: string;
-  coverArea: string;
-  samples: Sample[];
-  projectId: Project["projectId"];
-};
+}
+interface RegularSample extends Sample {
+  Sample_Latitude: number;
+  Sample_Longitude: number;
+  Geohash: string;
+  Timestamp_Sampling: string | null;
+}
+interface ControlSample extends Sample {
+  Sample_Latitude: null;
+  Sample_Longitude: null;
+  Geohash: null;
+  Timestamp_Sampling: null;
+}
 
-type Project = {
-  projectId: string;
+type Analisys = {
+  id: string;
   name: string;
   description: string;
-  credits: Credit[];
+  Samples_Names: string[];
+  DAPC_SVG_compoplot_URL?: string;
+  DAPC_SVG_scatterplot_URL?: string;
+  PCA_SVG_URL?: string;
+  PCoA_SVG_URL: string;
+  FASTA_OTU_URL: string | "NA";
+  Pipeline_Version?: string;
+  SHA256_DAPC_compoplot?: string;
+  SHA256_DAPC_scatterplot?: string;
+  SHA256_PCA_SVG?: string;
+  SHA256_PCoA_SVG: string;
+  SHA256_FASTA_OTU: string | "NA";
+  Pipeline_02_Version?: string;
+  DB_Version: string;
+  Marker: string;
+  /* DAPC_CSV_compoplot_URL?: string;
+  SHA256_DAPC_CSV_compoplot?: string;
+  SHA256_DAPC_CSV_scatterplot?: string;
+  SHA256_PCA_CSV?: string;
+  DAPC_CSV_scatterplot_URL?: string;
+  SHA256_PCoA_CSV: string;
+  PCA_CSV_URL?: string;
+  PCoA_CSV_URL: string; */
 };

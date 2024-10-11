@@ -17,7 +17,7 @@ import { ChevronRightIcon, MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Button, buttonVariants } from "@/components/ui/button";
 export default function SearchMap() {
   const [open, setOpen] = React.useState(false);
-  const sampleList = useSampleList();
+  const { sampleList } = useSampleList();
   const map = useMap();
   const handleClick = (location: Sample["location"]) => {
     if (!location) return;
@@ -41,11 +41,11 @@ export default function SearchMap() {
             {sampleList.map((sample: Sample, index: number) => (
               <CommandItem>
                 <Link
-                  href={`/biodiversity-samples/${sample.hashId}`}
+                  href={`/biodiversity-samples/${sample.Elabjournal_Sample_ID}`}
                   className="flex items-center justify-between w-full gap-2"
                   onClick={() => handleClick(sample.location)}
                 >
-                  {sample.hashId}
+                  {sample.Elabjournal_Sample_ID}
                   <ChevronRightIcon className="h-4 w-4" />
                 </Link>
               </CommandItem>

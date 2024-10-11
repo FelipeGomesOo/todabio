@@ -5,12 +5,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatDate(dateString: string) {
-  const [year, month, day] = dateString.split("-");
+export function formatDate(dateString: string | null): string {
+  if (!dateString) return "";
+
+  const [datePart] = dateString.split("T");
+
+  const [year, month, day] = datePart.split("-");
+
   return `${day}/${month}/${year}`;
 }
 
-export function getMaxGroup(dapc: { [key: string]: number }) {
+export function getMaxGroup(dapc?: {
+  [key: string]: number;
+}): string | undefined {
+  if (!dapc || Object.keys(dapc).length === 0) return undefined;
+
   return Object.keys(dapc).reduce((maxGroup, currentGroup) => {
     return dapc[currentGroup] > dapc[maxGroup] ? currentGroup : maxGroup;
   });
@@ -98,7 +107,7 @@ export function similarSamples(
     const sampleMarkers = sample.Sample_Markers;
 
     sampleMarkers.forEach((sampleMarker) => {
-      if (sampleMarker.Name === marker) {
+      if (sampleMarker.Marker === marker) {
         const dapcValue = sampleMarker.DAPC[largestGroup];
 
         const isLargest = Object.values(sampleMarker.DAPC).every(
