@@ -201,8 +201,14 @@ export function getDataPoints(samples: any) {
   return dataPoints;
 }
 
-function convertArrayToNumbers(inputArray: (string | number)[]): number[] {
+export function convertArrayToNumbers(
+  inputArray: (string | number)[]
+): number[] {
   return inputArray
     .map((item) => Number(item)) // Tenta converter cada item para número
     .filter((num) => !isNaN(num)); // Filtra valores que não são números (NaN)
+}
+
+export function copyToClipboard(content: string) {
+  navigator.clipboard.writeText(content);
 }
