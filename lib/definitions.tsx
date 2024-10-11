@@ -42,25 +42,34 @@ interface ControlSample extends Sample {
   Timestamp_Sampling: null;
 }
 
-type Analisys = {
+type Analysis = {
   id: string;
-  name: string;
-  description: string;
+  Title: string;
+  Description: string;
   Samples_Names: string[];
   DAPC_SVG_compoplot_URL?: string;
   DAPC_SVG_scatterplot_URL?: string;
   PCA_SVG_URL?: string;
   PCoA_SVG_URL: string;
-  FASTA_OTU_URL: string | "NA";
+  FASTA_OTU_URL?: string | "NA";
   Pipeline_Version?: string;
   SHA256_DAPC_compoplot?: string;
   SHA256_DAPC_scatterplot?: string;
   SHA256_PCA_SVG?: string;
-  SHA256_PCoA_SVG: string;
-  SHA256_FASTA_OTU: string | "NA";
+  SHA256_PCoA_SVG?: string;
+  SHA256_FASTA_OTU?: string | "NA";
   Pipeline_02_Version?: string;
-  DB_Version: string;
+  DB_Version?: string;
   Marker: string;
+  PCA_CSV_IND_COORD_URL?: string;
+  SHA256_PCA_CSV_IND_COORD?: string;
+  PCA_CSV_EIGENVALUES_URL?: string;
+  SHA256_PCA_CSV_EIGENVALUES?: string;
+  PCA_SVG_SCREEPLOT_URL?: string;
+  SHA256_PCA_SVG_SCREEPLOT?: string;
+  PCoA_CSV_IND_COORD_URL?: string;
+  SHA256_PCoA_CSV_IND_COORD?: string;
+  Analysis_Type: string;
   /* DAPC_CSV_compoplot_URL?: string;
   SHA256_DAPC_CSV_compoplot?: string;
   SHA256_DAPC_CSV_scatterplot?: string;
@@ -70,3 +79,4 @@ type Analisys = {
   PCA_CSV_URL?: string;
   PCoA_CSV_URL: string; */
 };
+declare module "@canvasjs/react-charts";
