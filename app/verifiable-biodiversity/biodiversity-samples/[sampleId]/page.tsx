@@ -1,9 +1,10 @@
 import useSampleList from "@/hooks/useSampleList";
-import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/lib/utils";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Table, TableBody } from "@/components/ui/table";
 import Image from "next/image";
 import SampleMarkersTabs from "@/components/map/SampleMarkersTabs";
+import BioRow from "@/components/map/BioRow";
+
 export default function BiodiversitySamplePage({
   params,
 }: {
@@ -27,9 +28,7 @@ export default function BiodiversitySamplePage({
     FASTQ_ID_Sequence_Provider,
     Pipeline_01_Version,
   } = sample;
-
   const locationString = `${Sample_Latitude},${Sample_Longitude}`;
-
   return (
     <div className="w-full overflow-hidden flex-col gap-8 flex items-start justify-start py-4">
       <header className="gap-4 w-full flex flex-col items-start justify-start">
@@ -50,38 +49,42 @@ export default function BiodiversitySamplePage({
 
         <Table className="border-t ">
           <TableBody>
-            <TableRow>
-              <TableCell>Matrix</TableCell>
-              <TableCell className="text-right">
-                <Badge variant="secondary">{Matrix}</Badge>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Coordinates</TableCell>
-              <TableCell className="text-right">
-                <Badge variant="secondary">{locationString}</Badge>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Date of collection</TableCell>
-              <TableCell className="text-right">
-                <Badge variant="secondary">
-                  {formatDate(Timestamp_Sampling)}
-                </Badge>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>FASTQ ID</TableCell>
-              <TableCell className="text-right flex gap-1 justify-end">
-                <Badge variant="secondary">{Elabjournal_Sample_ID}</Badge>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>FASTQ Sequence Provider</TableCell>
-              <TableCell className="text-right flex gap-1 justify-end">
-                <Badge variant="secondary">{FASTQ_ID_Sequence_Provider}</Badge>
-              </TableCell>
-            </TableRow>
+            <BioRow
+              label="Matrix"
+              type={"badge"}
+              obj={Matrix}
+              badgeContent={Matrix}
+            />
+            <BioRow
+              label="Coordinates"
+              type={"badge"}
+              obj={locationString}
+              badgeContent={locationString}
+            />
+            <BioRow
+              label="Longitude"
+              type={"badge"}
+              obj={Sample_Longitude}
+              badgeContent={Sample_Longitude}
+            />
+            <BioRow
+              label="Date of collection"
+              type={"badge"}
+              obj={Timestamp_Sampling}
+              badgeContent={formatDate(Timestamp_Sampling)}
+            />
+            <BioRow
+              label="FASTQ ID"
+              type={"badge"}
+              obj={Elabjournal_Sample_ID}
+              badgeContent={Elabjournal_Sample_ID}
+            />
+            <BioRow
+              label="FASTQ Sequence Provider"
+              type={"badge"}
+              obj={FASTQ_ID_Sequence_Provider}
+              badgeContent={FASTQ_ID_Sequence_Provider}
+            />
           </TableBody>
         </Table>
       </header>

@@ -1,4 +1,4 @@
-import StudyCard from "@/components/map/StudyCard";
+import AnalysisCard from "@/components/map/AnalysisCard";
 import analysesList from "@/lib/analisys";
 export default function VerifiableBiodiversityPage() {
   return (
@@ -18,7 +18,7 @@ export default function VerifiableBiodiversityPage() {
           <h3 className="text-base font-bold font-sans mb-2">Analyses</h3>
           <div className="w-full flex-col gap-4 flex">
             {analysesList.map((analysis) => (
-              <StudyCard analysis={analysis} />
+              <AnalysisCard analysis={analysis} />
             ))}
           </div>
         </div>

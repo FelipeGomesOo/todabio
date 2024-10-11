@@ -4,6 +4,7 @@ import { Badge, badgeVariants } from "@/components/ui/badge";
 import { similarSamples, getMaxGroup } from "@/lib/utils";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import BioRow from "@/components/map/BioRow";
 
 import GroupChart from "@/components/map/GroupChart";
 import SimilarProfiles from "./SimilarProfiles";
@@ -53,170 +54,88 @@ export default function SampleMarkersTabs({
                       </Link>
                     </TableCell>
                   </TableRow>
-                  <TableRow>
-                    <TableCell>FASTA</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={SampleMarker.FASTA_ASV_URL}
-                        className={badgeVariants({ variant: "secondary" })}
-                      >
-                        FASTA ASV
-                        <ArrowTopRightIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Clean FASTA</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={SampleMarker.Clean_FASTA_ASV_URL}
-                        className={badgeVariants({ variant: "secondary" })}
-                      >
-                        Clean FASTA ASV
-                        <ArrowTopRightIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>FASTA OTU</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={SampleMarker.FASTA_OTU_URL}
-                        className={badgeVariants({ variant: "secondary" })}
-                      >
-                        FASTA OTU
-                        <ArrowTopRightIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Rarefaction Curve</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={SampleMarker.Rarefaction_Curve_URL}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        Rarefaction Curve
-                        <ArrowTopRightIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 Forward</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_FASTQ_Forward}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 Reverse</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_FASTQ_Reverse}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 FASTA</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_FASTA_ASV}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 Clean FASTA</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_Clean_FASTA_ASV}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 FASTA OTU</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_FASTA_OTU}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>SHA256 Rarefaction Curve</TableCell>
-                    <TableCell className="text-right">
-                      <Link
-                        href={"/"}
-                        className={`${badgeVariants({
-                          variant: "secondary",
-                        })} `}
-                      >
-                        <p className="text-ellipsis w-44 overflow-hidden">
-                          {SampleMarker.SHA256_Rarefaction_Curve}
-                        </p>
-                        <CopyIcon className="h-4 w-4" />
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Shannon</TableCell>
-                    <TableCell className="text-right flex gap-1 justify-end">
-                      <Badge variant="secondary">{SampleMarker.Shannon}</Badge>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Richness</TableCell>
-                    <TableCell className="text-right flex gap-1 justify-end">
-                      <Badge variant="secondary">{SampleMarker.Riqueza}</Badge>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Pielou</TableCell>
-                    <TableCell className="text-right flex gap-1 justify-end">
-                      <Badge variant="secondary">{SampleMarker.Equidade}</Badge>
-                    </TableCell>
-                  </TableRow>
+                  <BioRow
+                    label="FASTA"
+                    type={"url"}
+                    url={SampleMarker.FASTA_ASV_URL}
+                    obj={SampleMarker.FASTA_ASV_URL}
+                    badgeContent="FASTA ASV"
+                  />
+                  <BioRow
+                    label="Clean FASTA"
+                    type={"url"}
+                    url={SampleMarker.Clean_FASTA_ASV_URL}
+                    obj={SampleMarker.Clean_FASTA_ASV_URL}
+                    badgeContent="Clean FASTA ASV"
+                  />
+                  <BioRow
+                    label="FASTA OTU"
+                    type={"url"}
+                    url={SampleMarker.FASTA_OTU_URL}
+                    obj={SampleMarker.FASTA_OTU_URL}
+                    badgeContent="FASTA OTU"
+                  />
+                  <BioRow
+                    label="Rarefaction Curve"
+                    type={"url"}
+                    url={SampleMarker.Rarefaction_Curve_URL}
+                    obj={SampleMarker.Rarefaction_Curve_URL}
+                    badgeContent="Rarefaction Curve"
+                  />
+                  <BioRow
+                    label="SHA256 Forward"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_FASTQ_Forward}
+                    badgeContent={SampleMarker.SHA256_FASTQ_Forward}
+                  />
+                  <BioRow
+                    label="SHA256 Reverse"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_FASTQ_Reverse}
+                    badgeContent={SampleMarker.SHA256_FASTQ_Reverse}
+                  />
+                  <BioRow
+                    label="SHA256 FASTA"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_FASTA_ASV}
+                    badgeContent={SampleMarker.SHA256_FASTA_ASV}
+                  />
+                  <BioRow
+                    label="SHA256 Clean FASTA"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_Clean_FASTA_ASV}
+                    badgeContent={SampleMarker.SHA256_Clean_FASTA_ASV}
+                  />
+                  <BioRow
+                    label="SHA256 FASTA OTU"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_FASTA_OTU}
+                    badgeContent={SampleMarker.SHA256_FASTA_OTU}
+                  />
+                  <BioRow
+                    label="SHA256 Rarefaction Curve"
+                    type={"sha256"}
+                    obj={SampleMarker.SHA256_Rarefaction_Curve}
+                    badgeContent={SampleMarker.SHA256_Rarefaction_Curve}
+                  />
+                  <BioRow
+                    label="Shannon"
+                    type={"badge"}
+                    obj={SampleMarker.Shannon}
+                    badgeContent={SampleMarker.Shannon}
+                  />
+                  <BioRow
+                    label="Richness"
+                    type={"badge"}
+                    obj={SampleMarker.Riqueza}
+                    badgeContent={SampleMarker.Riqueza}
+                  />
+                  <BioRow
+                    label="Pielou"
+                    type={"badge"}
+                    obj={SampleMarker.Equidade}
+                    badgeContent={SampleMarker.Equidade}
+                  />
                 </TableBody>
               </Table>
               {/* {SampleMarker.DAPC && (
