@@ -1,5 +1,5 @@
 import StudyCard from "@/components/map/StudyCard";
-
+import analysesList from "@/lib/analisys";
 export default function VerifiableBiodiversityPage() {
   return (
     <>
@@ -17,18 +17,9 @@ export default function VerifiableBiodiversityPage() {
         <div className="flex-col gap-2 flex">
           <h3 className="text-base font-bold font-sans mb-2">Analyses</h3>
           <div className="w-full flex-col gap-4 flex">
-            <StudyCard
-              name="Acre 2023-2024"
-              id="analisys-01"
-              description="Water Sample Biodiversity Analysis"
-              samples={126}
-            />
-            <StudyCard
-              name="Rio Paraná 2023-2024"
-              id="analisys-02"
-              description="Water Sample Biodiversity Analysis"
-              samples={60}
-            />
+            {analysesList.map((analysis) => (
+              <StudyCard analysis={analysis} />
+            ))}
           </div>
         </div>
       </div>
