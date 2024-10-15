@@ -11,22 +11,22 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
 import { getAllBetaAnalyses, getBetaAnalysisByID } from "@/lib/data";
+import { useRouter } from "next/navigation";
 
 export default function FilterByBeta() {
   const { currentBeta, setCurrentBeta, currentGamma, selectedMarker } =
     useGlobalSamples();
-  if (selectedMarker === "All Markers") {
-    return null;
-    if (!currentGamma) {
-      return null;
-    }
-  }
+  const router = useRouter();
   const allBetas = { ID: "All Betas", Title: "All Betas" };
   const currentBetaAnalysis = getBetaAnalysisByID(currentBeta) || allBetas;
 
   const handleBetaChange = (betaID: BetaAnalysis["ID"]) => {
-    let beta = getBetaAnalysisByID(betaID) || allBetas;
-    setCurrentBeta(beta.ID);
+    if (betaID !== "All Betas") {
+      router.push(`/verifiable-biodiversity/beta-analyses/${betaID}`);
+    } else {
+      router.push(`/verifiable-biodiversity/gamma-analyses/${currentGamma}`);
+    }
+    setCurrentBeta(betaID);
   };
   const betaAnalyses = getAllBetaAnalyses();
 

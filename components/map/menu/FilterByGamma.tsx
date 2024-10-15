@@ -10,22 +10,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
-import { getAllGammaAnalyses, getGammaAnalysisByID } from "@/lib/data";
+import { getAllGammaAnalyses } from "@/lib/data";
+import { useRouter } from "next/navigation";
 
 export default function FilterByGamma() {
-  const { currentGamma, setCurrentGamma, selectedMarker } = useGlobalSamples();
-  if (selectedMarker === "All Markers") {
-    return null;
-  }
-  const currentGammaAnalysis =
-    currentGamma && getGammaAnalysisByID(currentGamma);
-
+  const { currentGamma, setCurrentGamma } = useGlobalSamples();
+  const router = useRouter();
   const handlegammaChange = (gammaID: GammaAnalysis["ID"]) => {
-    let gamma = getGammaAnalysisByID(gammaID);
-    if (!gamma) {
-      gamma = currentGammaAnalysis || getAllGammaAnalyses()[0];
-    }
-    setCurrentGamma(gamma.ID);
+    router.push(`/verifiable-biodiversity/gamma-analyses/${gammaID}`);
+    setCurrentGamma(gammaID);
   };
   const Gammanalyses = getAllGammaAnalyses();
 
@@ -41,9 +34,6 @@ export default function FilterByGamma() {
           value={currentGamma || "All gammas"}
           onValueChange={handlegammaChange}
         >
-          <DropdownMenuRadioItem value="All gammas">
-            All gammas
-          </DropdownMenuRadioItem>
           {Gammanalyses.map((gamma: GammaAnalysis, index: number) => (
             <DropdownMenuRadioItem key={index} value={gamma.ID}>
               {gamma.ID}

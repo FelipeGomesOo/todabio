@@ -29,6 +29,18 @@ export default function FilterByMarker() {
     [searchParams]
   );
 
+  const onMarkerChange = (marker: string) => {
+    if (marker === "All Markers") {
+      router.push(`${pathname}?${createQueryString("marker", "All Markers")}`);
+    } else {
+      router.push(`${pathname}?${createQueryString("marker", marker)}`);
+    }
+  };
+
+  const handleMarkerChange = (value: string) => {
+    setSelectedMarker(value as MarkerType);
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -39,11 +51,8 @@ export default function FilterByMarker() {
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup
           value={selectedMarker}
-          onValueChange={setSelectedMarker}
+          onValueChange={handleMarkerChange}
         >
-          <DropdownMenuRadioItem value="All Markers">
-            All Markers
-          </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="12S">12S</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="16S">16S</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="COI">COI</DropdownMenuRadioItem>
