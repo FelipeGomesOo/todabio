@@ -216,3 +216,8 @@ export function copyToClipboard(content: string) {
 export function extractSampleId(strings: string[]): string[] {
   return strings.map((str) => str.split("_")[0]);
 }
+
+export const pipelineURL = {
+  "01": "https://github.com/Todabio/Todabio",
+  "02": "https://github.com/Todabio/Pipeline_OTUsDB",
+};

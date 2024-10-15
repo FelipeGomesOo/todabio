@@ -1,6 +1,7 @@
 "use client";
 import { Table, TableBody } from "@/components/ui/table";
 import BioRow from "@/components/map/BioRow";
+import { pipelineURL } from "@/lib/utils";
 
 export default function BetaDetails({
   analysis,
@@ -286,10 +287,11 @@ export default function BetaDetails({
         />
 
         <BioRow
-          label="Pipeline 02"
-          type={"badge"}
+          label="Pipeline"
+          type={"url"}
+          url={pipelineURL["02"]}
           obj={Pipeline_02_Version}
-          badgeContent={Pipeline_02_Version || "NA"}
+          badgeContent={Pipeline_02_Version}
         />
         <BioRow
           label="Database"

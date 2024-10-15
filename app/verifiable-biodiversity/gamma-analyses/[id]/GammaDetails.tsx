@@ -2,6 +2,7 @@
 import { Table, TableBody } from "@/components/ui/table";
 import BioRow from "@/components/map/BioRow";
 import { useEffect, useMemo } from "react";
+import { pipelineURL } from "@/lib/utils";
 
 export default function GammaDetails({
   analysis,
@@ -278,10 +279,10 @@ export default function GammaDetails({
           obj={SHA256_Rarefaction_curve_SVG}
           badgeContent={SHA256_Rarefaction_curve_SVG}
         />
-
         <BioRow
-          label="Pipeline 02"
-          type={"badge"}
+          label="Pipeline"
+          type={"url"}
+          url={pipelineURL["02"]}
           obj={Pipeline_02_Version}
           badgeContent={Pipeline_02_Version}
         />

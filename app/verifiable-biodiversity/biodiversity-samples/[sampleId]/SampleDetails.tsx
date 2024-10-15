@@ -5,7 +5,7 @@ import { Table, TableBody } from "@/components/ui/table";
 import Image from "next/image";
 import SampleMarkersTabs from "@/components/map/SampleMarkersTabs";
 import BioRow from "@/components/map/BioRow";
-
+import { pipelineURL } from "@/lib/utils";
 export default function SampleDetails({ sampleId }: { sampleId: string }) {
   const sample = getSampleById(sampleId);
 
@@ -50,6 +50,7 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
               obj={Matrix}
               badgeContent={Matrix}
             />
+
             <BioRow
               label="Coordinates"
               type={"badge"}
@@ -79,6 +80,13 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
               type={"badge"}
               obj={FASTQ_ID_Sequence_Provider}
               badgeContent={FASTQ_ID_Sequence_Provider}
+            />
+            <BioRow
+              label="Pipeline"
+              type={"url"}
+              url={pipelineURL["01"]}
+              obj={Pipeline_01_Version}
+              badgeContent={Pipeline_01_Version}
             />
           </TableBody>
         </Table>
