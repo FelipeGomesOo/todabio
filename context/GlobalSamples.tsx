@@ -34,23 +34,20 @@ const GlobalSamplesContext = createContext<
 >(undefined);
 
 export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
+  const latestGammaAnalysis = getAllGammaAnalyses().slice(-1)[0];
   const OriginalSamples = getAllSamples();
-  const [selectedMarker, setSelectedMarker] =
-    useState<MarkerType>("All Markers");
-  const [currentGamma, setCurrentGamma] = useState<GammaAnalysis["ID"] | null>(
-    null
+  const [selectedMarker, setSelectedMarker] = useState<MarkerType>("COI");
+  const [currentGamma, setCurrentGamma] = useState<GammaAnalysis["ID"]>(
+    latestGammaAnalysis.ID
   );
   const [currentBeta, setCurrentBeta] =
     useState<BetaAnalysis["ID"]>("All Betas");
-
-  const latestGammaAnalysis = getAllGammaAnalyses().slice(-1)[0];
 
   console.log("selectedMarker", selectedMarker);
   const filteredSamples = useMemo(() => {
     let filtered = [...OriginalSamples];
     console.log("OriginalSamples", OriginalSamples);
     if (selectedMarker && selectedMarker !== "All Markers") {
-      setCurrentGamma(latestGammaAnalysis.ID);
       if (currentGamma) {
         const gammaAnalysis = getGammaAnalysisByID(currentGamma);
         console.log("gammaAnalysis", gammaAnalysis);
