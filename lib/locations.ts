@@ -11,7 +11,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD235AQ_6qr9r60h6v9y_2023-03-17T09-00_water/data/40362-12s/reads/40362-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -41,7 +41,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.855046877554622,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD235AQ_6qr9r60h6v9y_2023-03-17T09-00_water/data/40362-16s/reads/40362-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -84,7 +84,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD236AQ_6qr9q9xuqrwv_2023-03-17T09-05_water/data/40354-12s/reads/40354-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -114,7 +114,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.844109638475159,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD236AQ_6qr9q9xuqrwv_2023-03-17T09-05_water/data/40354-16s/reads/40354-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -157,7 +157,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD237AQ_6qr9q73pyq4q_2023-03-17T09-10_water/data/40360-12s/reads/40360-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -187,7 +187,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.888320209379644,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD237AQ_6qr9q73pyq4q_2023-03-17T09-10_water/data/40360-16s/reads/40360-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -230,7 +230,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD238AQ_6qr9mg2e7dcv_2023-03-17T09-15_water/data/40359-12s/reads/40359-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -260,7 +260,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.860795096232032,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD238AQ_6qr9mg2e7dcv_2023-03-17T09-15_water/data/40359-16s/reads/40359-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -303,7 +303,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD239AQ_6qr9m2p57f8n_2023-03-16T09-00_water/data/40356-12s/reads/40356-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -333,7 +333,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.799157906452791,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD239AQ_6qr9m2p57f8n_2023-03-16T09-00_water/data/40356-16s/reads/40356-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -376,7 +376,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD240AQ_6qr9jn2x97d3_2023-03-17T09-20_water/data/40366-12s/reads/40366-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -406,7 +406,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.810294266424423,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD240AQ_6qr9jn2x97d3_2023-03-17T09-20_water/data/40366-16s/reads/40366-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -449,7 +449,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD241AQ_6qr9ht0wqmpx_2023-03-18T09-00_water/data/40348-12s/reads/40348-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -479,7 +479,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.777505667735179,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD241AQ_6qr9ht0wqmpx_2023-03-18T09-00_water/data/40348-16s/reads/40348-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -522,7 +522,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD242AQ_6qr8570t31dr_2023-03-13T09-00_water/data/40372-12s/reads/40372-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -552,7 +552,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.486943443559139,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD242AQ_6qr8570t31dr_2023-03-13T09-00_water/data/40372-16s/reads/40372-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -595,7 +595,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD243AQ_6qpxgp697tds_2023-03-10T09-00_water/data/40351-12s/reads/40351-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -625,7 +625,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.766580192480814,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD243AQ_6qpxgp697tds_2023-03-10T09-00_water/data/40351-16s/reads/40351-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -668,7 +668,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD244AQ_6qpxg50qqw5s_2023-03-10T09-05_water/data/40355-12s/reads/40355-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -698,7 +698,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.724052464934065,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD244AQ_6qpxg50qqw5s_2023-03-10T09-05_water/data/40355-16s/reads/40355-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -741,7 +741,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD245AQ_6qpxf8m0wh8w_2023-03-10T09-10_water/data/40370-12s/reads/40370-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -771,7 +771,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.704796128614881,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD245AQ_6qpxf8m0wh8w_2023-03-10T09-10_water/data/40370-16s/reads/40370-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -814,7 +814,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD246AQ_6qpxdntfyvhw_2023-03-15T09-00_water/data/40353-12s/reads/40353-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -844,7 +844,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.764675919034529,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD246AQ_6qpxdntfyvhw_2023-03-15T09-00_water/data/40353-16s/reads/40353-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -887,7 +887,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD247AQ_6qpxcut0my9p_2023-03-12T09-00_water/data/40368-12s/reads/40368-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -930,7 +930,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD248AQ_6qr8195h1qs1_2023-03-12T09-05_water/data/40361-12s/reads/40361-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -960,7 +960,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.749180942491879,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD248AQ_6qr8195h1qs1_2023-03-12T09-05_water/data/40361-16s/reads/40361-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1003,7 +1003,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD249AQ_6qpxcnpjmrev_2023-03-07T09-00_water/data/40371-12s/reads/40371-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1033,7 +1033,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.770684390726498,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD249AQ_6qpxcnpjmrev_2023-03-07T09-00_water/data/40371-16s/reads/40371-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1076,7 +1076,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD250AQ_6qpxbgd82uhj_2023-03-07T09-05_water/data/40347-12s/reads/40347-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1106,7 +1106,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.774863480235671,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD250AQ_6qpxbgd82uhj_2023-03-07T09-05_water/data/40347-16s/reads/40347-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1149,7 +1149,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD251AQ_6qrd5cpbrzwr_2023-03-20T09-00_water/data/40373-12s/reads/40373-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1179,7 +1179,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.854741999674606,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD251AQ_6qrd5cpbrzwr_2023-03-20T09-00_water/data/40373-16s/reads/40373-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1222,7 +1222,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD252AQ_6qr9gwkjbg38_2023-03-20T09-05_water/data/40346-12s/reads/40346-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1252,7 +1252,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.817167628505748,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD252AQ_6qr9gwkjbg38_2023-03-20T09-05_water/data/40346-16s/reads/40346-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1295,7 +1295,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD253AQ_6qr9g5yu1hfx_2023-03-21T09-00_water/data/40365-12s/reads/40365-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1325,7 +1325,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.274327442901117,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD253AQ_6qr9g5yu1hfx_2023-03-21T09-00_water/data/40365-16s/reads/40365-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1368,7 +1368,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD254AQ_6qr9feqb5qgk_2023-03-22T09-00_water/data/40357-12s/reads/40357-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1398,7 +1398,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.4051347002771,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD254AQ_6qr9feqb5qgk_2023-03-22T09-00_water/data/40357-16s/reads/40357-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1441,7 +1441,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD255AQ_6qr9dx2wmu1d_2023-03-22T09-05_water/data/40345-12s/reads/40345-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1471,7 +1471,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.549593788062117,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD255AQ_6qr9dx2wmu1d_2023-03-22T09-05_water/data/40345-16s/reads/40345-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1514,7 +1514,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD256AQ_6qr9dm32cs66_2023-03-23T09-00_water/data/40352-12s/reads/40352-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1544,7 +1544,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.62400840110247,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD256AQ_6qr9dm32cs66_2023-03-23T09-00_water/data/40352-16s/reads/40352-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1587,7 +1587,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD257AQ_6qr8652y71kz_2023-03-07T09-10_water/data/40350-12s/reads/40350-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1617,7 +1617,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.548530825676366,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD257AQ_6qr8652y71kz_2023-03-07T09-10_water/data/40350-16s/reads/40350-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1660,7 +1660,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD258AQ_6qr83ww08evc_2023-03-06T09-00_water/data/40369-12s/reads/40369-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1690,7 +1690,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.628586662087778,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD258AQ_6qr83ww08evc_2023-03-06T09-00_water/data/40369-16s/reads/40369-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1733,7 +1733,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD259AQ_6qr89dt7gx2v_2023-03-06T09-05_water/data/40367-12s/reads/40367-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1763,7 +1763,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.647766558192432,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD259AQ_6qr89dt7gx2v_2023-03-06T09-05_water/data/40367-16s/reads/40367-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1806,7 +1806,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD260AQ_6qr89yuuve7k_2023-03-09T09-00_water/data/40363-12s/reads/40363-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1836,7 +1836,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.860843854609989,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD260AQ_6qr89yuuve7k_2023-03-09T09-00_water/data/40363-16s/reads/40363-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1879,7 +1879,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD261AQ_6qr89mth6pnv_2023-03-09T09-05_water/data/40364-12s/reads/40364-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1909,7 +1909,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.855156930564584,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD261AQ_6qr89mth6pnv_2023-03-09T09-05_water/data/40364-16s/reads/40364-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1952,7 +1952,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD262AQ_6qr894c428gt_2023-03-09T09-10_water/data/40358-12s/reads/40358-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -1982,7 +1982,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.847493946533001,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD262AQ_6qr894c428gt_2023-03-09T09-10_water/data/40358-16s/reads/40358-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2025,7 +2025,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD263AQ_6qr888f7qwk0_2023-03-09T09-15_water/data/40344-12s/reads/40344-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2055,7 +2055,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.84031052667034,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD263AQ_6qr888f7qwk0_2023-03-09T09-15_water/data/40344-16s/reads/40344-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2098,7 +2098,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD264AQ_6qr82m5pkcr7_2023-03-09T09-20_water/data/40349-12s/reads/40349-12s_Vertebrates_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2128,7 +2128,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.873912578631349,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/BD264AQ_6qr82m5pkcr7_2023-03-09T09-20_water/data/40349-16s/reads/40349-16s_Mammals_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2171,7 +2171,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ001AQ_6u7d3js0rqy7_2023-09-23T09-00_water/data/18180XD-07-01-12s/reads/18180XD-07-01-12s_S307_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2201,7 +2201,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.304841188237368,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ001AQ_6u7d3js0rqy7_2023-09-23T09-00_water/data/18180XD-07-01-16s/reads/18180XD-07-01-16s_S316_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2274,7 +2274,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ002AQ_6u7d3js0rqy8_2023-09-23T09-05_water/data/18180XD-07-02-12s/reads/18180XD-07-02-12s_S308_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2304,7 +2304,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.276873287817204,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ002AQ_6u7d3js0rqy8_2023-09-23T09-05_water/data/18180XD-07-02-16s/reads/18180XD-07-02-16s_S299_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2377,7 +2377,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ003AQ_6u7d3js0rqy9_2023-09-23T09-10_water/data/18180XD-07-03-12s/reads/18180XD-07-03-12s_S309_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2407,7 +2407,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.611846699216931,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ003AQ_6u7d3js0rqy9_2023-09-23T09-10_water/data/18180XD-07-03-16s/reads/18180XD-07-03-16s_S300_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2480,7 +2480,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ004AQ_6u7d3js0rqy10_2023-09-23T09-15_water/data/18180XD-07-04-12s/reads/18180XD-07-04-12s_S310_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2510,7 +2510,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.43439645736666,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ004AQ_6u7d3js0rqy10_2023-09-23T09-15_water/data/18180XD-07-04-16s/reads/18180XD-07-04-16s_S301_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2583,7 +2583,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ005AQ_6u7d3js0rqy11_2023-09-23T09-20_water/data/18180XD-07-05-12s/reads/18180XD-07-05-12s_S311_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2613,7 +2613,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.342349536405513,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ005AQ_6u7d3js0rqy11_2023-09-23T09-20_water/data/18180XD-07-05-16s/reads/18180XD-07-05-16s_S302_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2686,7 +2686,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ006AQ_6u7d3js0rqy12_2023-09-23T09-25_water/data/18180XD-07-06-12s/reads/18180XD-07-06-12s_S312_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2716,7 +2716,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.205687098624611,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ006AQ_6u7d3js0rqy12_2023-09-23T09-25_water/data/18180XD-07-06-16s/reads/18180XD-07-06-16s_S303_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2789,7 +2789,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ007AQ_6u7d3js0rqy13_2023-09-23T09-30_water/data/18180XD-07-07-12s/reads/18180XD-07-07-12s_S313_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2819,7 +2819,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.616634619520979,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ007AQ_6u7d3js0rqy13_2023-09-23T09-30_water/data/18180XD-07-07-16s/reads/18180XD-07-07-16s_S304_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2892,7 +2892,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ008AQ_6u7d3js0rqy14_2023-09-23T09-35_water/data/18180XD-07-08-12s/reads/18180XD-07-08-12s_S314_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2922,7 +2922,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.250566057837486,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ008AQ_6u7d3js0rqy14_2023-09-23T09-35_water/data/18180XD-07-08-16s/reads/18180XD-07-08-16s_S305_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -2995,7 +2995,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ009AQ_6u7d3js0rqy15_2023-09-23T09-40_water/data/18180XD-07-09-12s/reads/18180XD-07-09-12s_S315_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3025,7 +3025,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.311955214814032,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ009AQ_6u7d3js0rqy15_2023-09-23T09-40_water/data/18180XD-07-09-16s/reads/18180XD-07-09-16s_S306_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3098,7 +3098,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ373AQ_6uk0nup1bwgk_2021-10-19T18-07_water/data/18180XD-10-02-12s/reads/18180XD-10-02-12s_S161_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3128,7 +3128,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.575522788371147,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ373AQ_6uk0nup1bwgk_2021-10-19T18-07_water/data/18180XD-10-02-16s/reads/18180XD-10-02-16s_S79_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3201,7 +3201,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ374AQ_6uk0nup1bwgk_2021-10-19T18-10_water/data/18180XD-10-03-12s/reads/18180XD-10-03-12s_S162_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3231,7 +3231,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.509890845497997,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ374AQ_6uk0nup1bwgk_2021-10-19T18-10_water/data/18180XD-10-03-16s/reads/18180XD-10-03-16s_S80_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3304,7 +3304,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ375AQ_6uk0nup1bwgk_2021-10-19T18-12_water/data/18180XD-10-04-12s/reads/18180XD-10-04-12s_S170_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3334,7 +3334,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.481060123044568,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ375AQ_6uk0nup1bwgk_2021-10-19T18-12_water/data/18180XD-10-04-16s/reads/18180XD-10-04-16s_S50_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3407,7 +3407,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ377AQ_6uk07cq35w60_2021-10-19T20-40_water/data/18180XD-10-06-12s/reads/18180XD-10-06-12s_S186_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3437,7 +3437,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.389085705165064,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ377AQ_6uk07cq35w60_2021-10-19T20-40_water/data/18180XD-10-06-16s/reads/18180XD-10-06-16s_S40_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3510,7 +3510,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ378AQ_6uk07cq35w61_2021-10-19T20-42_water/data/18180XD-10-07-12s/reads/18180XD-10-07-12s_S187_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3540,7 +3540,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.519440602670074,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ378AQ_6uk07cq35w61_2021-10-19T20-42_water/data/18180XD-10-07-16s/reads/18180XD-10-07-16s_S72_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3613,7 +3613,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ379AQ_6uk07cq35w62_2021-10-19T20-45_water/data/18180XD-10-08-12s/reads/18180XD-10-08-12s_S188_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3643,7 +3643,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.637579410720326,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ379AQ_6uk07cq35w62_2021-10-19T20-45_water/data/18180XD-10-08-16s/reads/18180XD-10-08-16s_S73_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3716,7 +3716,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ381AQ_6uk01mtymg63_2021-10-19T17-00_water/data/18180XD-10-10-12s/reads/18180XD-10-10-12s_S171_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3746,7 +3746,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.530456567900185,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ381AQ_6uk01mtymg63_2021-10-19T17-00_water/data/18180XD-10-10-16s/reads/18180XD-10-10-16s_S41_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3819,7 +3819,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ382AQ_6uk01mtymg64_2021-10-19T17-02_water/data/18180XD-10-11-12s/reads/18180XD-10-11-12s_S172_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3849,7 +3849,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.446746170985547,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ382AQ_6uk01mtymg64_2021-10-19T17-02_water/data/18180XD-10-11-16s/reads/18180XD-10-11-16s_S51_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3922,7 +3922,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ383AQ_6uk01mtymg65_2021-10-19T17-05_water/data/18180XD-10-12-12s/reads/18180XD-10-12-12s_S163_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -3952,7 +3952,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.432458391288742,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ383AQ_6uk01mtymg65_2021-10-19T17-05_water/data/18180XD-10-12-16s/reads/18180XD-10-12-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4025,7 +4025,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ385AQ_6uk0977pd5x4_2021-10-19T21-07_water/data/18180XD-10-14-12s/reads/18180XD-10-14-12s_S164_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4055,7 +4055,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.629689945803253,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ385AQ_6uk0977pd5x4_2021-10-19T21-07_water/data/18180XD-10-14-16s/reads/18180XD-10-14-16s_S81_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4128,7 +4128,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ386AQ_6uk0977pd5x5_2021-10-19T21-10_water/data/18180XD-10-15-12s/reads/18180XD-10-15-12s_S165_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4158,7 +4158,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.583460659382768,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ386AQ_6uk0977pd5x5_2021-10-19T21-10_water/data/18180XD-10-15-16s/reads/18180XD-10-15-16s_S74_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4231,7 +4231,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ387AQ_6uk0977pd5x6_2021-10-19T21-12_water/data/18180XD-10-16-12s/reads/18180XD-10-16-12s_S166_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4261,7 +4261,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.641892160155295,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ387AQ_6uk0977pd5x6_2021-10-19T21-12_water/data/18180XD-10-16-16s/reads/18180XD-10-16-16s_S53_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4334,7 +4334,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ393AQ_6u7bzqht07xv_2021-10-19T21-32_water/data/18180XD-10-18-12s/reads/18180XD-10-18-12s_S167_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4364,7 +4364,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.620504107477912,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ393AQ_6u7bzqht07xv_2021-10-19T21-32_water/data/18180XD-10-18-16s/reads/18180XD-10-18-16s_S75_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4437,7 +4437,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ394AQ_6u7bzqht07xv_2021-10-19T21-35_water/data/18180XD-10-19-12s/reads/18180XD-10-19-12s_S168_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4467,7 +4467,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.771158467383071,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ394AQ_6u7bzqht07xv_2021-10-19T21-35_water/data/18180XD-10-19-16s/reads/18180XD-10-19-16s_S54_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4540,7 +4540,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ395AQ_6u7bzqht07xv_2021-10-19T21-40_water/data/18180XD-10-20-12s/reads/18180XD-10-20-12s_S169_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4570,7 +4570,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.374381332309419,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ395AQ_6u7bzqht07xv_2021-10-19T21-40_water/data/18180XD-10-20-16s/reads/18180XD-10-20-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4643,7 +4643,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ397AQ_6u7ck2b421wx_2021-10-20T16-35_water/data/18180XD-10-22-12s/reads/18180XD-10-22-12s_S173_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4673,7 +4673,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.46957828782872,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ397AQ_6u7ck2b421wx_2021-10-20T16-35_water/data/18180XD-10-22-16s/reads/18180XD-10-22-16s_S55_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4746,7 +4746,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ398AQ_6u7ck2b421wx_2021-10-20T16-37_water/data/18180XD-10-23-12s/reads/18180XD-10-23-12s_S174_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4776,7 +4776,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.295285429786847,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ398AQ_6u7ck2b421wx_2021-10-20T16-37_water/data/18180XD-10-23-16s/reads/18180XD-10-23-16s_S42_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4849,7 +4849,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ399AQ_6u7ck2b421wx_2021-10-20T16-39_water/data/18180XD-10-24-12s/reads/18180XD-10-24-12s_S175_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4879,7 +4879,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.411337891207474,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ399AQ_6u7ck2b421wx_2021-10-20T16-39_water/data/18180XD-10-24-16s/reads/18180XD-10-24-16s_S56_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4952,7 +4952,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ401AQ_6u7bggyqu9wm_2021-10-19T14-45_water/data/18180XD-10-26-12s/reads/18180XD-10-26-12s_S176_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -4982,7 +4982,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.374502402593666,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ401AQ_6u7bggyqu9wm_2021-10-19T14-45_water/data/18180XD-10-26-16s/reads/18180XD-10-26-16s_S57_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5055,7 +5055,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ402AQ_6u7bggyqu9wm_2021-10-19T15-03_water/data/18180XD-10-27-12s/reads/18180XD-10-27-12s_S189_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5085,7 +5085,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.675377264359302,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ402AQ_6u7bggyqu9wm_2021-10-19T15-03_water/data/18180XD-10-27-16s/reads/18180XD-10-27-16s_S43_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5158,7 +5158,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ403AQ_6u7bggyqu9wm_2021-10-19T15-06_water/data/18180XD-10-28-12s/reads/18180XD-10-28-12s_S190_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5188,7 +5188,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.191311428796612,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ403AQ_6u7bggyqu9wm_2021-10-19T15-06_water/data/18180XD-10-28-16s/reads/18180XD-10-28-16s_S58_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5261,7 +5261,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ405AQ_6u7c9mv2g8w8_2021-10-20T15-20_water/data/18180XD-10-30-12s/reads/18180XD-10-30-12s_S191_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5291,7 +5291,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.330045061922425,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ405AQ_6u7c9mv2g8w8_2021-10-20T15-20_water/data/18180XD-10-30-16s/reads/18180XD-10-30-16s_S59_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5364,7 +5364,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ406AQ_6u7c9mv2g8w9_2021-10-20T15-22_water/data/18180XD-10-31-12s/reads/18180XD-10-31-12s_S192_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5394,7 +5394,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.657408728695137,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ406AQ_6u7c9mv2g8w9_2021-10-20T15-22_water/data/18180XD-10-31-16s/reads/18180XD-10-31-16s_S60_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5467,7 +5467,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ407AQ_6u7c9mv2g8w10_2021-10-20T15-24_water/data/18180XD-10-32-12s/reads/18180XD-10-32-12s_S193_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5497,7 +5497,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.643938282067567,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ407AQ_6u7c9mv2g8w10_2021-10-20T15-24_water/data/18180XD-10-32-16s/reads/18180XD-10-32-16s_S61_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5570,7 +5570,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ409AQ_6u7c1gyw8k5n_2021-10-19T12-45_water/data/18180XD-10-34-12s/reads/18180XD-10-34-12s_S177_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5600,7 +5600,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.637155009358615,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ409AQ_6u7c1gyw8k5n_2021-10-19T12-45_water/data/18180XD-10-34-16s/reads/18180XD-10-34-16s_S62_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5673,7 +5673,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ410AQ_6u7c1gyw8k5n_2021-10-19T13-10_water/data/18180XD-10-35-12s/reads/18180XD-10-35-12s_S178_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5703,7 +5703,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.658400246737882,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ410AQ_6u7c1gyw8k5n_2021-10-19T13-10_water/data/18180XD-10-35-16s/reads/18180XD-10-35-16s_S63_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5776,7 +5776,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ411AQ_6u7c1gyw8k5n_2021-10-19T13-25_water/data/18180XD-10-36-12s/reads/18180XD-10-36-12s_S194_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5806,7 +5806,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.45719851486911,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ411AQ_6u7c1gyw8k5n_2021-10-19T13-25_water/data/18180XD-10-36-16s/reads/18180XD-10-36-16s_S64_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5879,7 +5879,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ413AQ_6u7cg77xfxf8_2021-10-20T15-50_water/data/18180XD-10-38-12s/reads/18180XD-10-38-12s_S195_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5909,7 +5909,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.498635291034567,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ413AQ_6u7cg77xfxf8_2021-10-20T15-50_water/data/18180XD-10-38-16s/reads/18180XD-10-38-16s_S44_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -5982,7 +5982,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ414AQ_6u7cg77xfxf9_2021-10-20T15-52_water/data/18180XD-10-39-12s/reads/18180XD-10-39-12s_S179_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6012,7 +6012,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.453526877195116,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ414AQ_6u7cg77xfxf9_2021-10-20T15-52_water/data/18180XD-10-39-16s/reads/18180XD-10-39-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6085,7 +6085,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ415AQ_6u7cg77xfxf10_2021-10-20T15-55_water/data/18180XD-10-40-12s/reads/18180XD-10-40-12s_S180_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6115,7 +6115,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.413227526761457,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ415AQ_6u7cg77xfxf10_2021-10-20T15-55_water/data/18180XD-10-40-16s/reads/18180XD-10-40-16s_S65_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6188,7 +6188,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ417AQ_6u7dn6pqfbq2_2021-10-20T14-20_water/data/18180XD-10-42-12s/reads/18180XD-10-42-12s_S196_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6218,7 +6218,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.538239541096301,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ417AQ_6u7dn6pqfbq2_2021-10-20T14-20_water/data/18180XD-10-42-16s/reads/18180XD-10-42-16s_S66_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6291,7 +6291,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ418AQ_6u7dn6pqfbq3_2021-10-20T14-22_water/data/18180XD-10-43-12s/reads/18180XD-10-43-12s_S197_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6321,7 +6321,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.470801808732786,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ418AQ_6u7dn6pqfbq3_2021-10-20T14-22_water/data/18180XD-10-43-16s/reads/18180XD-10-43-16s_S46_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6394,7 +6394,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ419AQ_6u7dn6pqfbq4_2021-10-20T14-25_water/data/18180XD-10-44-12s/reads/18180XD-10-44-12s_S181_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6424,7 +6424,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.778442959056488,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ419AQ_6u7dn6pqfbq4_2021-10-20T14-25_water/data/18180XD-10-44-16s/reads/18180XD-10-44-16s_S47_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6497,7 +6497,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ421AQ_6u7d7vxhgbq0_2021-10-20T13-00_water/data/18180XD-10-46-12s/reads/18180XD-10-46-12s_S182_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6527,7 +6527,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.430017038927636,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ421AQ_6u7d7vxhgbq0_2021-10-20T13-00_water/data/18180XD-10-46-16s/reads/18180XD-10-46-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6600,7 +6600,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ422AQ_6u7d7vxhgbq1_2021-10-20T13-02_water/data/18180XD-10-47-12s/reads/18180XD-10-47-12s_S183_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6630,7 +6630,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.52554551063853,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ422AQ_6u7d7vxhgbq1_2021-10-20T13-02_water/data/18180XD-10-47-16s/reads/18180XD-10-47-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6703,7 +6703,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ423AQ_6u7d7vxhgbq2_2021-10-20T13-05_water/data/18180XD-10-48-12s/reads/18180XD-10-48-12s_S198_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6733,7 +6733,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.545138779538571,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ423AQ_6u7d7vxhgbq2_2021-10-20T13-05_water/data/18180XD-10-48-16s/reads/18180XD-10-48-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6806,7 +6806,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ425AQ_6u7d3js0rxfx_2021-10-20T11-55_water/data/18180XD-10-50-12s/reads/18180XD-10-50-12s_S199_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6836,7 +6836,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.577908102835149,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ425AQ_6u7d3js0rxfx_2021-10-20T11-55_water/data/18180XD-10-50-16s/reads/18180XD-10-50-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6909,7 +6909,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ426AQ_6u7d3js0rxfx_2021-10-20T12-00_water/data/18180XD-10-51-12s/reads/18180XD-10-51-12s_S184_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -6939,7 +6939,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.58521992185852,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ426AQ_6u7d3js0rxfx_2021-10-20T12-00_water/data/18180XD-10-51-16s/reads/18180XD-10-51-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7012,7 +7012,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ427AQ_6u7d3js0rxfx_2021-10-20T12-05_water/data/18180XD-10-52-12s/reads/18180XD-10-52-12s_S200_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7042,7 +7042,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.238380886447302,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ427AQ_6u7d3js0rxfx_2021-10-20T12-05_water/data/18180XD-10-52-16s/reads/18180XD-10-52-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7115,7 +7115,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ429AQ_6u7dte1g566r_2021-10-20T19-10_water/data/18180XD-10-54-12s/reads/18180XD-10-54-12s_S185_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7145,7 +7145,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.746611977386256,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ429AQ_6u7dte1g566r_2021-10-20T19-10_water/data/18180XD-10-54-16s/reads/18180XD-10-54-16s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7218,7 +7218,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ430AQ_6u7dte1g566r_2021-10-20T19-13_water/data/18180XD-10-55-12s/reads/18180XD-10-55-12s_S201_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7248,7 +7248,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.637584933853507,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ430AQ_6u7dte1g566r_2021-10-20T19-13_water/data/18180XD-10-55-16s/reads/18180XD-10-55-16s_S48_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7321,7 +7321,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ431AQ_6u7dte1g566r_2021-10-20T19-15_water/data/18180XD-10-56-12s/reads/18180XD-10-56-12s_S202_L004_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7351,7 +7351,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.499667748759824,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ431AQ_6u7dte1g566r_2021-10-20T19-15_water/data/18180XD-10-56-16s/reads/18180XD-10-56-16s_S49_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7424,7 +7424,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ486AQ_6gfrmmvp82xy_2022-12-13T18-30_water/data/18180XD-11-01-12s/reads/18180XD-11-01-12s_S74_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7454,7 +7454,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.267859663654625,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ486AQ_6gfrmmvp82xy_2022-12-13T18-30_water/data/18180XD-11-01-16s/reads/18180XD-11-01-16s_S77_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7527,7 +7527,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ487AQ_6gfrmmvp82xy_2022-12-13T18-35_water/data/18180XD-11-02-12s/reads/18180XD-11-02-12s_S76_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7557,7 +7557,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.191342541896671,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ487AQ_6gfrmmvp82xy_2022-12-13T18-35_water/data/18180XD-11-02-16s/reads/18180XD-11-02-16s_S79_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7630,7 +7630,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ488AQ_6gfrmmvp82xy_2022-12-13T18-40_water/data/18180XD-11-03-12s/reads/18180XD-11-03-12s_S68_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7660,7 +7660,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.118645435261152,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ488AQ_6gfrmmvp82xy_2022-12-13T18-40_water/data/18180XD-11-03-16s/reads/18180XD-11-03-16s_S80_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7733,7 +7733,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ489AQ_control_water/data/18180XD-11-04-12s/reads/18180XD-11-04-12s_S90_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7763,7 +7763,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.117949609301905,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ489AQ_control_water/data/18180XD-11-04-16s/reads/18180XD-11-04-16s_S82_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7836,7 +7836,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ490AQ_6u73ch3qj3qz_2022-12-14T12-55_water/data/18180XD-11-05-12s/reads/18180XD-11-05-12s_S81_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7866,7 +7866,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.219613203389757,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ490AQ_6u73ch3qj3qz_2022-12-14T12-55_water/data/18180XD-11-05-16s/reads/18180XD-11-05-16s_S84_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7939,7 +7939,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ491AQ_6u73ch3qj3qz_2022-12-14T13-00_water/data/18180XD-11-06-12s/reads/18180XD-11-06-12s_S83_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -7969,7 +7969,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.28419545854005,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ491AQ_6u73ch3qj3qz_2022-12-14T13-00_water/data/18180XD-11-06-16s/reads/18180XD-11-06-16s_S86_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8042,7 +8042,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ492AQ_6u73ch3qj3qz_2022-12-14T13-10_water/data/18180XD-11-07-12s/reads/18180XD-11-07-12s_S85_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8072,7 +8072,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.326103838521956,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ492AQ_6u73ch3qj3qz_2022-12-14T13-10_water/data/18180XD-11-07-16s/reads/18180XD-11-07-16s_S73_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8145,7 +8145,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ493AQ_control_water/data/18180XD-11-08-12s/reads/18180XD-11-08-12s_S88_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8175,7 +8175,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.203180539804905,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ493AQ_control_water/data/18180XD-11-08-16s/reads/18180XD-11-08-16s_S75_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8248,7 +8248,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ626AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-01-12s/reads/18180XD-13-01-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8278,7 +8278,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.571187114697804,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ626AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-01-16s/reads/18180XD-13-01-16s_S324_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8351,7 +8351,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ627AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-02-12s/reads/18180XD-13-02-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8381,7 +8381,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.578258276478012,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ627AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-02-16s/reads/18180XD-13-02-16s_S295_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8454,7 +8454,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ628AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-03-12s/reads/18180XD-13-03-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8484,7 +8484,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.540077712731288,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ628AQ_6u76d49y1tt6_2023-11-13T17-52_water/data/18180XD-13-03-16s/reads/18180XD-13-03-16s_S325_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8557,7 +8557,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ629AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-04-12s/reads/18180XD-13-04-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8587,7 +8587,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.51120924319673,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ629AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-04-16s/reads/18180XD-13-04-16s_S296_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8660,7 +8660,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ630AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-05-12s/reads/18180XD-13-05-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8690,7 +8690,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.587970848152033,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ630AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-05-16s/reads/18180XD-13-05-16s_S297_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8763,7 +8763,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ631AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-06-12s/reads/18180XD-13-06-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8793,7 +8793,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.460586795737764,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ631AQ_6u74r5rbpqx5_2023-11-13T16-36_water/data/18180XD-13-06-16s/reads/18180XD-13-06-16s_S298_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8866,7 +8866,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ632AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-07-12s/reads/18180XD-13-07-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8896,7 +8896,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.614073539962471,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ632AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-07-16s/reads/18180XD-13-07-16s_S299_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8969,7 +8969,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ633AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-08-12s/reads/18180XD-13-08-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -8999,7 +8999,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.666307772672716,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ633AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-08-16s/reads/18180XD-13-08-16s_S326_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9072,7 +9072,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ634AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-09-12s/reads/18180XD-13-09-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9102,7 +9102,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.552680294081205,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ634AQ_6u73chgsddv8_2023-11-13T13-30_water/data/18180XD-13-09-16s/reads/18180XD-13-09-16s_S300_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9175,7 +9175,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ635AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-10-12s/reads/18180XD-13-10-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9205,7 +9205,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.550221531970812,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ635AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-10-16s/reads/18180XD-13-10-16s_S301_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9278,7 +9278,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ636AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-11-12s/reads/18180XD-13-11-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9308,7 +9308,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.569770879462301,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ636AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-11-16s/reads/18180XD-13-11-16s_S327_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9381,7 +9381,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ637AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-12-12s/reads/18180XD-13-12-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9411,7 +9411,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.456448437111062,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ637AQ_6u76kmwn645n_2023-11-13T15-13_water/data/18180XD-13-12-16s/reads/18180XD-13-12-16s_S328_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9484,7 +9484,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ638AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-13-12s/reads/18180XD-13-13-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9514,7 +9514,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.630080635127212,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ638AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-13-16s/reads/18180XD-13-13-16s_S302_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9587,7 +9587,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ639AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-14-12s/reads/18180XD-13-14-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9617,7 +9617,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.315419787367022,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ639AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-14-16s/reads/18180XD-13-14-16s_S303_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9690,7 +9690,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ640AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-15-12s/reads/18180XD-13-15-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9720,7 +9720,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.577659612695685,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ640AQ_6u77hx2xnrbe_2023-11-14T08-56_water/data/18180XD-13-15-16s/reads/18180XD-13-15-16s_S329_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9793,7 +9793,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ641AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-16-12s/reads/18180XD-13-16-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9823,7 +9823,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.384557251566504,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ641AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-16-16s/reads/18180XD-13-16-16s_S304_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9896,7 +9896,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ642AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-17-12s/reads/18180XD-13-17-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9926,7 +9926,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.395086163703585,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ642AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-17-16s/reads/18180XD-13-17-16s_S305_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -9999,7 +9999,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ643AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-18-12s/reads/18180XD-13-18-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10029,7 +10029,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.408143098690908,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ643AQ_6u77yufj8gk3_2023-11-14T09-35_water/data/18180XD-13-18-16s/reads/18180XD-13-18-16s_S306_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10102,7 +10102,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ648AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-20-12s/reads/18180XD-13-20-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10132,7 +10132,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.477805088170497,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ648AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-20-16s/reads/18180XD-13-20-16s_S308_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10205,7 +10205,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ649AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-21-12s/reads/18180XD-13-21-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10235,7 +10235,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.43655356278935,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ649AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-21-16s/reads/18180XD-13-21-16s_S309_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10308,7 +10308,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ650AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-22-12s/reads/18180XD-13-22-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10338,7 +10338,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.461778403380688,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ650AQ_6gfrmhek15bt_2023-11-16T09-48_water/data/18180XD-13-22-16s/reads/18180XD-13-22-16s_S310_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10411,7 +10411,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ651AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-23-12s/reads/18180XD-13-23-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10441,7 +10441,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.506023183620135,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ651AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-23-16s/reads/18180XD-13-23-16s_S311_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10514,7 +10514,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ652AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-24-12s/reads/18180XD-13-24-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10544,7 +10544,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.407816227030839,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ652AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-24-16s/reads/18180XD-13-24-16s_S330_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10617,7 +10617,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ653AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-25-12s/reads/18180XD-13-25-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10647,7 +10647,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.444060804157525,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ653AQ_6gfxe60pet7k_2023-11-16T10-20_water/data/18180XD-13-25-16s/reads/18180XD-13-25-16s_S331_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10720,7 +10720,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ654AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-26-12s/reads/18180XD-13-26-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10750,7 +10750,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.369291166122722,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ654AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-26-16s/reads/18180XD-13-26-16s_S312_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10823,7 +10823,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ655AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-27-12s/reads/18180XD-13-27-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10853,7 +10853,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.340664043939517,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ655AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-27-16s/reads/18180XD-13-27-16s_S313_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10926,7 +10926,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ656AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-28-12s/reads/18180XD-13-28-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -10956,7 +10956,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.423349889321132,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ656AQ_6gfxm2ef9ymk_2023-11-16T11-45_water/data/18180XD-13-28-16s/reads/18180XD-13-28-16s_S314_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11029,7 +11029,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ657AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-29-12s/reads/18180XD-13-29-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11059,7 +11059,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.299329114381077,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ657AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-29-16s/reads/18180XD-13-29-16s_S315_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11132,7 +11132,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ658AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-30-12s/reads/18180XD-13-30-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11162,7 +11162,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.493112689892127,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ658AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-30-16s/reads/18180XD-13-30-16s_S316_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11235,7 +11235,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ659AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-31-12s/reads/18180XD-13-31-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11265,7 +11265,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.474626490947955,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ659AQ_6gfz58bbefx2_2023-11-17T07-52_water/data/18180XD-13-31-16s/reads/18180XD-13-31-16s_S317_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11338,7 +11338,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ660AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-32-12s/reads/18180XD-13-32-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11368,7 +11368,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.541769843851362,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ660AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-32-16s/reads/18180XD-13-32-16s_S318_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11441,7 +11441,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ661AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-33-12s/reads/18180XD-13-33-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11471,7 +11471,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.523069409394065,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ661AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-33-16s/reads/18180XD-13-33-16s_S319_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11544,7 +11544,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ662AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-34-12s/reads/18180XD-13-34-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11574,7 +11574,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.60852625335255,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ662AQ_6gfzm5ftwcjn_2023-11-17T08-40_water/data/18180XD-13-34-16s/reads/18180XD-13-34-16s_S332_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11647,7 +11647,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ663AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-35-12s/reads/18180XD-13-35-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11677,7 +11677,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.222074797142437,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ663AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-35-16s/reads/18180XD-13-35-16s_S320_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11750,7 +11750,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ664AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-36-12s/reads/18180XD-13-36-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11780,7 +11780,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.415384671475344,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ664AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-36-16s/reads/18180XD-13-36-16s_S321_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11853,7 +11853,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ665AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-37-12s/reads/18180XD-13-37-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11883,7 +11883,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.262309702797715,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ665AQ_6gfztm98frct_2023-11-17T09-06_water/data/18180XD-13-37-16s/reads/18180XD-13-37-16s_S322_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11956,7 +11956,7 @@ const Samples: (RegularSample | ControlSample)[] = [
     Pipeline_01_Version: "v1",
     Sample_Markers: [
       {
-        Marker: "12s",
+        Marker: "12S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ666AQ_control_water/data/18180XD-13-38-12s/reads/18180XD-13-38-12s_S0_L001_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:
@@ -11986,7 +11986,7 @@ const Samples: (RegularSample | ControlSample)[] = [
         Equidade: 0.3201691502544,
       },
       {
-        Marker: "16s",
+        Marker: "16S",
         FASTQ_Forward_URL:
           "https://s3.amazonaws.com/toda.bio/db_v1/TZ666AQ_control_water/data/18180XD-13-38-16s/reads/18180XD-13-38-16s_S323_L007_R1_001.fastq.gz",
         SHA256_FASTQ_Forward:

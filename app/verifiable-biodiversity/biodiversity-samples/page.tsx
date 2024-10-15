@@ -1,5 +1,5 @@
 import useSampleList from "@/hooks/useSampleList";
-import SampleCard from "@/components/map/sampleCard";
+import SampleCard from "@/components/map/cards/sampleCard";
 
 export default function Home() {
   const { sampleList } = useSampleList();

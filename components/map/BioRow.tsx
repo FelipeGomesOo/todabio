@@ -22,21 +22,20 @@ import Link from "next/link";
 
 interface AnalysisRowProps {
   label: string;
-  url?: string;
+  url?: string | null;
   sha256?: string;
-  badgeContent: string | number | null;
+  badgeContent: string | number | null | undefined;
   type: "url" | "sha256" | "badge" | "dialogbox";
   obj?: any;
 }
 export default function BioRow({
   label,
   url,
-  sha256,
   badgeContent,
   type,
   obj,
 }: AnalysisRowProps) {
-  if (obj === undefined) {
+  if (obj === undefined || obj === null) {
     return null;
   }
   return (
@@ -64,7 +63,7 @@ export default function BioRow({
             </DialogContent>
           </Dialog>
         )}
-        {type === "sha256" && (
+        {type === "sha256" && typeof badgeContent === "string" && (
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>

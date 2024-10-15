@@ -1,20 +1,32 @@
 type DAPC = {
   [key: string]: number;
 };
+type MarkerType =
+  | "All Markers"
+  | "12S"
+  | "16S"
+  | "18S"
+  | "COI"
+  | "ITS1"
+  | "ITS2"
+  | "rbcL"
+  | "matK"
+  | "trnL"
+  | "Other";
 
 interface SampleMarker {
-  Marker: string;
+  Marker: MarkerType;
   FASTQ_Forward_URL: string;
-  SHA256_FASTQ_Forward: string;
   FASTQ_Reverse_URL: string;
-  SHA256_FASTQ_Reverse: string;
   FASTA_ASV_URL: string;
-  SHA256_FASTA_ASV: string;
   Clean_FASTA_ASV_URL: string;
-  SHA256_Clean_FASTA_ASV: string;
   FASTA_OTU_URL: string;
-  SHA256_FASTA_OTU: string;
   Rarefaction_Curve_URL: string;
+  SHA256_FASTQ_Forward: string;
+  SHA256_FASTQ_Reverse: string;
+  SHA256_FASTA_ASV: string;
+  SHA256_Clean_FASTA_ASV: string;
+  SHA256_FASTA_OTU: string;
   SHA256_Rarefaction_Curve: string;
   Shannon: number;
   Riqueza: number;
@@ -42,41 +54,95 @@ interface ControlSample extends Sample {
   Timestamp_Sampling: null;
 }
 
-type Analysis = {
-  id: string;
+type BetaAnalysis = {
+  ID: string;
   Title: string;
   Description: string;
-  Samples_Names: string[];
-  DAPC_SVG_compoplot_URL?: string;
-  DAPC_SVG_scatterplot_URL?: string;
-  PCA_SVG_URL?: string;
-  PCoA_SVG_URL: string;
-  FASTA_OTU_URL?: string | "NA";
-  Pipeline_Version?: string;
-  SHA256_DAPC_compoplot?: string;
-  SHA256_DAPC_scatterplot?: string;
-  SHA256_PCA_SVG?: string;
-  SHA256_PCoA_SVG?: string;
-  SHA256_FASTA_OTU?: string | "NA";
-  Pipeline_02_Version?: string;
-  DB_Version?: string;
-  Marker: string;
-  PCA_CSV_IND_COORD_URL?: string;
-  SHA256_PCA_CSV_IND_COORD?: string;
-  PCA_CSV_EIGENVALUES_URL?: string;
-  SHA256_PCA_CSV_EIGENVALUES?: string;
-  PCA_SVG_SCREEPLOT_URL?: string;
-  SHA256_PCA_SVG_SCREEPLOT?: string;
-  PCoA_CSV_IND_COORD_URL?: string;
-  SHA256_PCoA_CSV_IND_COORD?: string;
-  Analysis_Type: string;
-  /* DAPC_CSV_compoplot_URL?: string;
-  SHA256_DAPC_CSV_compoplot?: string;
-  SHA256_DAPC_CSV_scatterplot?: string;
-  SHA256_PCA_CSV?: string;
-  DAPC_CSV_scatterplot_URL?: string;
-  SHA256_PCoA_CSV: string;
-  PCA_CSV_URL?: string;
-  PCoA_CSV_URL: string; */
+  BetaMarkers: BetaMarkerAnalysis[];
 };
+type BetaMarkerAnalysis = {
+  Marker: MarkerType;
+  Samples_Names: string[];
+  Type: string;
+
+  DAPC_SVG_compoplot_URL?: string | null;
+  DAPC_SVG_predefined_URL?: string | null;
+  CSV_diversity_URL?: string | null;
+  PCA_SVG_screeplot_URL?: string | null;
+  PCA_SVG_URL?: string | null;
+  PCoA_SVG_URL?: string | null;
+  Rarefaction_curve_SVG_URL?: string | null;
+  DAPC_CSV_eigenvalues_URL?: string | null;
+  DAPC_CSV_ind_coords_URL?: string | null;
+  DAPC_CSV_probabilities_URL?: string | null;
+  PCA_CSV_eigenvalues_URL?: string | null;
+  PCA_CSV_ind_coords_URL?: string | null;
+  PCoA_CSV_anosim_stats_URL?: string | null;
+  PCoA_CSV_ind_coords_URL?: string | null;
+  CSV_Perc_p_values_URL?: string | null;
+
+  SHA256_DAPC_compoplot?: string | null;
+  SHA256_DAPC_SVG_predefined?: string | null;
+  SHA256_CSV_diversity?: string | null;
+  SHA256_DAPC_ind_coords?: string | null;
+  SHA256_PCA_SVG_screeplot?: string | null;
+  SHA256_PCA_SVG?: string | null;
+  SHA256_PCoA_SVG?: string | null;
+  SHA256_Rarefaction_curve_SVG?: string | null;
+  SHA256_DAPC_CSV_eigenvalues?: string | null;
+  SHA256_DAPC_CSV_probabilities?: string | null;
+  SHA256_PCA_CSV_eigenvalues?: string | null;
+  SHA256_PCA_CSV_ind_coords?: string | null;
+  SHA256_PCoA_CSV_anosim_stats?: string | null;
+  SHA256_PCoA_CSV_ind_coords?: string | null;
+  SHA256_CSV_Perc_p_values?: string | null;
+
+  DB_Version?: string | null;
+  Pipeline_02_Version?: string | null;
+};
+
+type GammaAnalysis = {
+  ID: string;
+  GammaMarkers: GammaMarkerAnalysis[];
+};
+type GammaMarkerAnalysis = {
+  Marker: MarkerType;
+  Samples_Names: string[];
+  Type: string;
+  DAPC_SVG_compoplot_URL?: string | null;
+  DAPC_SVG_predefined_URL?: string | null;
+  PCA_SVG_URL?: string | null;
+  PCA_SVG_screeplot_URL?: string | null;
+  PCoA_SVG_URL?: string | null;
+  Rarefaction_curve_SVG_URL?: string | null;
+  DAPC_CSV_eigenvalues_URL?: string | null;
+  DAPC_CSV_ind_coords_URL?: string | null;
+  DAPC_CSV_probabilities_URL?: string | null;
+  CSV_diversity_URL?: string | null;
+  PCA_CSV_eigenvalues_URL?: string | null;
+  PCA_CSV_ind_coords_URL?: string | null;
+  PCoA_CSV_anosim_stats_URL?: string | null;
+  PCoA_CSV_ind_coords_URL?: string | null;
+  CSV_Perc_p_values_URL?: string | null;
+
+  SHA256_DAPC_compoplot?: string | null;
+  SHA256_DAPC_CSV_eigenvalues?: string | null;
+  SHA256_DAPC_ind_coords?: string | null;
+  SHA256_DAPC_SVG_predefined?: string | null;
+  SHA256_DAPC_CSV_probabilities?: string | null;
+  SHA256_CSV_diversity?: string | null;
+  SHA256_PCA_CSV_eigenvalues?: string | null;
+  SHA256_PCA_CSV_ind_coords?: string | null;
+  SHA256_PCA_SVG_screeplot?: string | null;
+  SHA256_PCA_SVG?: string | null;
+  SHA256_PCoA_CSV_anosim_stats?: string | null;
+  SHA256_PCoA_CSV_ind_coords?: string | null;
+  SHA256_PCoA_SVG?: string | null;
+  SHA256_CSV_Perc_p_values?: string | null;
+  SHA256_Rarefaction_curve_SVG?: string | null;
+
+  Pipeline_02_Version?: string | null;
+  DB_Version?: string | null;
+};
+
 declare module "@canvasjs/react-charts";

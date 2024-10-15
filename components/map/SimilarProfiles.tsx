@@ -1,4 +1,4 @@
-import SampleCard from "@/components/map/sampleCard";
+import SampleCard from "@/components/map/cards/sampleCard";
 import { similarSamples, getMaxGroup } from "@/lib/utils";
 import { Badge } from "lucide-react";
 export default function SimilarProfiles({

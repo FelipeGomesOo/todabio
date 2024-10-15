@@ -212,3 +212,7 @@ export function convertArrayToNumbers(
 export function copyToClipboard(content: string) {
   navigator.clipboard.writeText(content);
 }
+
+export function extractSampleId(strings: string[]): string[] {
+  return strings.map((str) => str.split("_")[0]);
+}

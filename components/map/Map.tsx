@@ -1,15 +1,12 @@
 "use client";
 import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
-import ContextualMenu from "@/components/map/ContextualMenu";
+import ContextualMenu from "@/components/map/menu/ContextualMenu";
+import { useGlobalSamples } from "@/context/GlobalSamples";
 /* import MapSubtitles from "./MapSubtitles"; */
-export default async function TodabioMap({
-  mapId,
-  sampleList,
-}: {
-  mapId: string;
-  sampleList: RegularSample[];
-}) {
+
+export default function TodabioMap({ mapId }: { mapId: string }) {
+  const { regularSamples } = useGlobalSamples();
   return (
     <Map
       mapId={mapId}
@@ -29,7 +26,7 @@ export default async function TodabioMap({
     >
       <ContextualMenu />
       {/* <MapSubtitles /> */}
-      <PoiMarkers pois={sampleList} />
+      <PoiMarkers pois={regularSamples} />
     </Map>
   );
 }

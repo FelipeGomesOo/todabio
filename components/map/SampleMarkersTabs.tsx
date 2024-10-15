@@ -6,19 +6,23 @@ import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BioRow from "@/components/map/BioRow";
 
-import GroupChart from "@/components/map/GroupChart";
-import SimilarProfiles from "./SimilarProfiles";
+/* import GroupChart from "@/components/map/GroupChart";
+import SimilarProfiles from "./SimilarProfiles"; */
 import Link from "next/link";
-import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
+import { useGlobalSamples } from "@/context/GlobalSamples";
 export default function SampleMarkersTabs({
   Sample_Markers,
 }: {
   Sample_Markers: SampleMarker[];
 }) {
-  const currentGlobalMarker = useCurrentGlobalMarker();
-
+  const { selectedMarker } = useGlobalSamples();
+  console.log(selectedMarker);
+  const defaultMarker: MarkerType =
+    selectedMarker === "All Markers"
+      ? ("12S" as MarkerType)
+      : (selectedMarker as MarkerType);
   return (
-    <Tabs defaultValue={"12s"} className="w-full">
+    <Tabs defaultValue={defaultMarker} className="w-full">
       <section className="flex items-center justify-between">
         <h3 className="text-sm font-bold font-sans">Sample Markers</h3>
         <TabsList>

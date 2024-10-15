@@ -1,6 +1,12 @@
-import AnalysisCard from "@/components/map/AnalysisCard";
-import analysesList from "@/lib/analisys";
+import BetaAnalysisCard from "@/components/map/cards/BetaAnalysisCard";
+import GammaAnalysisCard from "@/components/map/cards/GammaAnalysisCard";
+
+import { getAllGammaAnalyses } from "@/lib/data";
+import { getAllBetaAnalyses } from "@/lib/data";
+
 export default function VerifiableBiodiversityPage() {
+  const gammaAnalyses = getAllGammaAnalyses();
+  const betaAnalyses = getAllBetaAnalyses();
   return (
     <>
       <div className="w-full flex-col gap-6 flex py-4">
@@ -13,12 +19,22 @@ export default function VerifiableBiodiversityPage() {
             samples.
           </p>
         </div>
+        <div className="flex-col gap-2 flex">
+          <h3 className="text-base font-bold font-sans mb-2">Gamma Analyses</h3>
+          <div className="w-full flex-col gap-4 flex">
+            {gammaAnalyses.map((analysis: GammaAnalysis) => (
+              <GammaAnalysisCard analysis={analysis} />
+            ))}
+          </div>
+        </div>
 
         <div className="flex-col gap-2 flex">
-          <h3 className="text-base font-bold font-sans mb-2">Analyses</h3>
+          <h3 className="text-base font-bold font-sans mb-2">Beta Analyses</h3>
           <div className="w-full flex-col gap-4 flex">
-            {analysesList.map((analysis) => (
-              <AnalysisCard analysis={analysis} />
+            {betaAnalyses.map((analysis: BetaAnalysis) => (
+              <>
+                <BetaAnalysisCard analysis={analysis} />
+              </>
             ))}
           </div>
         </div>
