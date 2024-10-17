@@ -1,4 +1,8 @@
-import { extractSampleId } from "@/lib/utils";
+import {
+  createDapcObjects,
+  extractSampleId,
+  mergeDapcIntoSamples,
+} from "@/lib/utils";
 import Samples from "@/lib/locations";
 import betaAnalyses from "@/lib/betaAnalyses";
 import gammaAnalyses from "@/lib/gammaAnalyses";
@@ -93,4 +97,64 @@ export function getSamplesByAnalysis(
   }
 
   return validSamples;
+}
+
+export function getGammaSamples(
+  gammaID: GammaAnalysis["ID"],
+  marker: MarkerType
+): RegularSample[] | ControlSample[] {
+  try {
+    const gammaAnalysis = getGammaAnalysisByID(gammaID);
+    if (!gammaAnalysis) {
+      throw new Error("Gamma analysis not found");
+    }
+    const gammaMarkerAnalysis = getGammaMarkerAnalysis(gammaAnalysis, marker);
+    if (!gammaMarkerAnalysis) {
+      throw new Error("Gamma marker analysis not found");
+    }
+    const gammaSamples = getSamplesByAnalysis(gammaMarkerAnalysis);
+
+    return gammaSamples ?? [];
+  } catch (error) {
+    console.error("Error during gamma analysis process:", error);
+    return [];
+  }
+}
+
+export function getBetaSamples(
+  betaID: BetaAnalysis["ID"],
+  marker: MarkerType
+): RegularSample[] | ControlSample[] {
+  try {
+    const betaAnalysis = getBetaAnalysisByID(betaID);
+    if (!betaAnalysis) {
+      throw new Error("beta analysis not found");
+    }
+    const betaMarkerAnalysis = getBetaMarkerAnalysis(betaAnalysis, marker);
+    if (!betaMarkerAnalysis) {
+      throw new Error("beta marker analysis not found");
+    }
+    const betaSamples = getSamplesByAnalysis(betaMarkerAnalysis);
+
+    return betaSamples ?? [];
+  } catch (error) {
+    console.error("Error during beta analysis process:", error);
+    return [];
+  }
+}
+export function getSamplesWithDAPC(
+  CSVData: any,
+  samples: RegularSample[] | ControlSample[]
+) {
+  // Cria os objetos DAPC
+  const DAPC_samples = createDapcObjects(CSVData);
+  console.log("DAPC Samples From CSV", DAPC_samples);
+
+  // Mescla DAPC nas amostras regulares
+  const samplesWithDapc = mergeDapcIntoSamples(samples, DAPC_samples);
+  console.log("Beta Samples Before Merging", samples);
+  console.log("Merged Beta Samples", samplesWithDapc);
+
+  // Retorna as amostras filtradas
+  return samplesWithDapc;
 }

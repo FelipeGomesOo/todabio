@@ -1,44 +1,44 @@
-type Props = {};
+import { interpolateColors } from "@/lib/utils";
+import React from "react";
 
-export default function MapSubtitles({}: Props) {
+type DAPC = {
+  [key: string]: number;
+};
+
+export default function MapSubtitles({
+  regularSamples,
+}: {
+  regularSamples: RegularSample[];
+}) {
+  const dapcExample: DAPC[] = regularSamples[0]?.dapc || [];
+  if (dapcExample.length === 0) {
+    return null;
+  }
+  const DAPCColors =
+    dapcExample.length > 0 ? interpolateColors(dapcExample.length) : undefined;
+
+  function groupColor(index: number) {
+    if (DAPCColors && index >= 0 && index < DAPCColors.length) {
+      return DAPCColors[index];
+    }
+    return undefined;
+  }
+
   return (
     <div className="absolute bottom-6 right-4 p-4 bg-white rounded-md flex-col justify-start items-start inline-flex">
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-lightGreen rounded-full"></div>
-        <h5 className="text-xs">Acre</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-darkGreen rounded-full"></div>
-        <h5 className="text-xs">Jupiá</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-cyan rounded-full"></div>
-        <h5 className="text-xs">Rosana</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-blue rounded-full"></div>
-        <h5 className="text-xs">"Três Irmãos"</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-purple rounded-full"></div>
-        <h5 className="text-xs">Guadalupe</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-pink rounded-full"></div>
-        <h5 className="text-xs">Bom Jardim</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-red rounded-full"></div>
-        <h5 className="text-xs">Florença</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-orange rounded-full"></div>
-        <h5 className="text-xs">Madureira</h5>
-      </div>
-      <div className="items-center gap-2 inline-flex">
-        <div className="w-2 h-2 bg-chart-yellow rounded-full"></div>
-        <h5 className="text-xs">Pirajá</h5>
-      </div>
+      {dapcExample.map((line, index: number) => {
+        const [key, value] = Object.entries(line)[0];
+
+        return (
+          <div key={index} className="items-center gap-2 inline-flex">
+            <div
+              style={{ background: groupColor(index) }}
+              className="w-2 h-2   rounded-full"
+            ></div>
+            <h5 className="text-xs">{key}</h5>
+          </div>
+        );
+      })}
     </div>
   );
 }

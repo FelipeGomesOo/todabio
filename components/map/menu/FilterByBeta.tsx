@@ -24,9 +24,10 @@ export default function FilterByBeta() {
     if (betaID !== "All Betas") {
       router.push(`/verifiable-biodiversity/beta-analyses/${betaID}`);
     } else {
+      console.log("Pushed to Gamma Page");
       router.push(`/verifiable-biodiversity/gamma-analyses/${currentGamma}`);
     }
-    setCurrentBeta(betaID);
+    //setCurrentBeta(betaID);
   };
   const betaAnalyses = getAllBetaAnalyses();
 

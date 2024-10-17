@@ -26,7 +26,7 @@ export default function SearchMap() {
     map?.setZoom(12);
     setOpen(false);
   };
-  console.log("filteredSamples", filteredSamples);
+  //console.log("filteredSamples", filteredSamples);
   return (
     <>
       <Button onClick={() => setOpen(true)} variant="outline">

@@ -1,9 +1,11 @@
-import { groupColors } from "@/lib/utils";
+import { groupColors, interpolateColors } from "@/lib/utils";
 
-export default function Point({ grouping }: { grouping: string | undefined }) {
-  const isGrouped = typeof grouping === "string";
-  const bg = isGrouped ? groupColors[grouping].color : "black";
-
+export default function Point({
+  background,
+}: {
+  background: string | undefined;
+}) {
+  const bg = background;
   return (
     <div
       style={{ background: bg }}

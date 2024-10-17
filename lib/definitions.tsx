@@ -1,6 +1,3 @@
-type DAPC = {
-  [key: string]: number;
-};
 type MarkerType =
   | "All Markers"
   | "12S"
@@ -31,8 +28,9 @@ interface SampleMarker {
   Shannon: number;
   Riqueza: number;
   Equidade: number;
-  DAPC?: DAPC;
 }
+type DAPC = Array<{ [key: string]: number }> | undefined;
+
 interface Sample {
   "Depth_(m)": number | null | string;
   Matrix: string;
@@ -40,6 +38,7 @@ interface Sample {
   FASTQ_ID_Sequence_Provider: string;
   Pipeline_01_Version: string;
   Sample_Markers: SampleMarker[];
+  dapc?: DAPC;
 }
 interface RegularSample extends Sample {
   Sample_Latitude: number;

@@ -9,12 +9,19 @@ export default function BetaMarkerTabs({
 }: {
   analysis: BetaAnalysis;
 }) {
-  const { setCurrentBeta, selectedMarker, setSelectedMarker } =
-    useGlobalSamples();
+  const {
+    setCurrentBeta,
+    currentBeta,
+    selectedMarker,
+    setSelectedMarker,
+    setIsLoading,
+  } = useGlobalSamples();
 
-  useEffect(() => {
+  if (currentBeta !== analysis.ID) {
+    setIsLoading(true);
     setCurrentBeta(analysis.ID);
-  }, [analysis]);
+    console.log("Beta Page changed beta to", analysis.ID);
+  }
 
   const defaultMarker: MarkerType =
     selectedMarker === "All Markers"
@@ -28,7 +35,7 @@ export default function BetaMarkerTabs({
         <TabsList>
           {analysis.BetaMarkers.map((betaMarker, index) => (
             <TabsTrigger
-              key={index}
+              key={`tabs${index}`}
               value={betaMarker.Marker}
               onClick={() => setSelectedMarker(betaMarker.Marker)}
             >
@@ -39,7 +46,7 @@ export default function BetaMarkerTabs({
       </section>
       {analysis.BetaMarkers.map((betaMarker, index) => (
         <>
-          <TabsContent key={index} value={betaMarker.Marker}>
+          <TabsContent key={`tabscontent${index}`} value={betaMarker.Marker}>
             <BetaDetails analysis={betaMarker} />
           </TabsContent>
         </>

@@ -1,32 +1,29 @@
+import useFetchCSV from "@/hooks/useFetchCSV";
 import {
   getAllGammaAnalyses,
-  getAllSamples,
-  getBetaAnalysisByID,
-  getBetaMarkerAnalysis,
-  getGammaAnalysisByID,
-  getGammaMarkerAnalysis,
-  getSamplesByAnalysis,
+  getBetaSamples,
+  getGammaSamples,
+  getSamplesWithDAPC,
 } from "@/lib/data";
+import { betaContainsDAPC } from "@/lib/utils";
 import React, {
   createContext,
   useContext,
   useState,
   ReactNode,
-  useMemo,
+  useEffect,
 } from "react";
 
 interface GlobalSamplesContextType {
-  regularSamples: RegularSample[];
-  controlSamples: ControlSample[];
-  selectedMarker: string | "All Markers";
+  selectedMarker: MarkerType | "All Markers";
   setSelectedMarker: React.Dispatch<React.SetStateAction<MarkerType>>;
   currentGamma: GammaAnalysis["ID"] | null;
-  setCurrentGamma: React.Dispatch<
-    React.SetStateAction<GammaAnalysis["ID"] | null>
-  >;
+  setCurrentGamma: React.Dispatch<React.SetStateAction<GammaAnalysis["ID"]>>;
   currentBeta: BetaAnalysis["ID"];
   setCurrentBeta: React.Dispatch<React.SetStateAction<BetaAnalysis["ID"]>>;
-  filteredSamples: (RegularSample | ControlSample)[];
+  filteredSamples: RegularSample[] | ControlSample[] | Sample[];
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const GlobalSamplesContext = createContext<
@@ -34,74 +31,66 @@ const GlobalSamplesContext = createContext<
 >(undefined);
 
 export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
-  const latestGammaAnalysis = getAllGammaAnalyses().slice(-1)[0];
-  const OriginalSamples = getAllSamples();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [selectedMarker, setSelectedMarker] = useState<MarkerType>("COI");
+  const latestGammaAnalysis = getAllGammaAnalyses().slice(-1)[0];
+
   const [currentGamma, setCurrentGamma] = useState<GammaAnalysis["ID"]>(
     latestGammaAnalysis.ID
   );
   const [currentBeta, setCurrentBeta] =
     useState<BetaAnalysis["ID"]>("All Betas");
+  const { fetchCsv } = useFetchCSV();
+  const [filteredSamples, setFilteredSamples] = useState<
+    RegularSample[] | ControlSample[] | Sample[]
+  >([]);
 
-  console.log("selectedMarker", selectedMarker);
-  const filteredSamples = useMemo(() => {
-    let filtered = [...OriginalSamples];
-    console.log("OriginalSamples", OriginalSamples);
-    if (selectedMarker && selectedMarker !== "All Markers") {
-      if (currentGamma) {
-        const gammaAnalysis = getGammaAnalysisByID(currentGamma);
-        console.log("gammaAnalysis", gammaAnalysis);
-        const gammaMarkerAnalysis =
-          gammaAnalysis &&
-          getGammaMarkerAnalysis(gammaAnalysis, selectedMarker);
-        console.log("gammaMarkerAnalysis", gammaMarkerAnalysis);
-        const gammaSamples =
-          gammaMarkerAnalysis && getSamplesByAnalysis(gammaMarkerAnalysis);
-        console.log("gammaSamples", gammaSamples);
-        filtered = gammaSamples ?? [];
-      }
+  useEffect(() => {
+    const fetchData = async () => {
+      setIsLoading(true);
+      const gammaSamples = getGammaSamples(currentGamma, selectedMarker);
 
-      // Filtrar por Beta Analysis
-      if (currentBeta === "All Betas") {
-        filtered = filtered;
+      if (currentBeta !== "All Betas") {
+        const betaSamples = getBetaSamples(currentBeta, selectedMarker);
+        const { DAPC_CSV_URL, containsDAPC } = betaContainsDAPC(
+          currentBeta,
+          selectedMarker
+        );
+
+        if (containsDAPC && DAPC_CSV_URL) {
+          console.log("Beta contains DAPC!", DAPC_CSV_URL);
+          const CSVData: Array<string> = await new Promise((resolve) => {
+            fetchCsv(DAPC_CSV_URL, resolve);
+          });
+
+          if (CSVData.length > 0) {
+            const samplesWithDAPC = getSamplesWithDAPC(CSVData, betaSamples);
+            setFilteredSamples(samplesWithDAPC);
+            setIsLoading(false);
+            console.log("CSVData.length > 0");
+          } else {
+            setFilteredSamples(betaSamples);
+            setIsLoading(false);
+            console.log("No data returned from CSV.");
+          }
+        } else {
+          setFilteredSamples(betaSamples);
+          setIsLoading(false);
+          console.log("Beta does not contain DAPC");
+        }
       } else {
-        const betaAnalysis = getBetaAnalysisByID(currentBeta);
-        console.log("betaAnalysis", betaAnalysis);
-        const betaMarkerAnalysis =
-          betaAnalysis && getBetaMarkerAnalysis(betaAnalysis, selectedMarker);
-        console.log("betaMarkerAnalysis", betaMarkerAnalysis);
-        const betaSamples =
-          betaMarkerAnalysis && getSamplesByAnalysis(betaMarkerAnalysis);
-        console.log("betaSamples", betaSamples);
-        filtered = betaSamples ?? filtered;
+        setFilteredSamples(gammaSamples);
+        setIsLoading(false);
+        console.log("Samples are all betas");
       }
-      filtered = filtered.filter((sample) =>
-        sample.Sample_Markers.some(
-          (markerObj) => markerObj.Marker === selectedMarker
-        )
-      );
-      console.log("filteredAfterMarker", filtered); // Verifique após a filtragem por marcador
-    } else {
-      filtered = [...OriginalSamples];
-    }
+    };
 
-    console.log("finalFilteredSamples", filtered); // Verifique o resultado final das amostras filtradas
-    return filtered;
-  }, [OriginalSamples, selectedMarker, currentGamma, currentBeta]);
-
-  // Dividir as amostras em regulares e de controle
-  const regularSamples = filteredSamples.filter(
-    (sample): sample is RegularSample => sample.Sample_Latitude !== null
-  );
-  const controlSamples = filteredSamples.filter(
-    (sample): sample is ControlSample => sample.Sample_Latitude === null
-  );
+    fetchData();
+  }, [selectedMarker, currentGamma, currentBeta, fetchCsv]);
 
   return (
     <GlobalSamplesContext.Provider
       value={{
-        regularSamples,
-        controlSamples,
         selectedMarker,
         setSelectedMarker,
         currentGamma,
@@ -109,6 +98,8 @@ export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
         currentBeta,
         setCurrentBeta,
         filteredSamples,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}

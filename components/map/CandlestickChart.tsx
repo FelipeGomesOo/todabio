@@ -10,14 +10,16 @@ export default function CandlestickChart() {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    const url = "https://www.felipe-gomes.com/sample-curve.csv"; // URL do CSV
+    //const url = "https://www.felipe-gomes.com/sample-curve.csv"; // URL do CSV
+    const url =
+      "https://www.felipe-gomes.com/16S-DAPC-probabilities-predefined-tresirmaos.csv"; // URL do CSV
 
     const fetchCsv = () => {
       readRemoteFile(url, {
         complete: (results) => {
-          //console.log("Results:", results);
-          let treatedDataPoints = getDataPoints(results.data);
-          setData(treatedDataPoints);
+          console.log("Results:", results);
+          //let treatedDataPoints = getDataPoints(results.data);
+          //setData(treatedDataPoints);
         },
         download: true,
       });

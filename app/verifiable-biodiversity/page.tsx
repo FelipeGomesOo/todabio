@@ -1,12 +1,19 @@
+"use client";
 import BetaAnalysisCard from "@/components/map/cards/BetaAnalysisCard";
 import GammaAnalysisCard from "@/components/map/cards/GammaAnalysisCard";
-
 import { getAllGammaAnalyses } from "@/lib/data";
 import { getAllBetaAnalyses } from "@/lib/data";
+import { useGlobalSamples } from "@/context/GlobalSamples";
 
 export default function VerifiableBiodiversityPage() {
   const gammaAnalyses = getAllGammaAnalyses();
   const betaAnalyses = getAllBetaAnalyses();
+  const { currentBeta, setCurrentBeta, setIsLoading } = useGlobalSamples();
+  if (currentBeta !== "All Betas") {
+    setIsLoading(true);
+    setCurrentBeta("All Betas");
+    console.log("First Page changed beta to All Betas");
+  }
   return (
     <>
       <div className="w-full flex-col gap-6 flex py-4">

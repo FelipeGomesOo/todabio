@@ -3,16 +3,35 @@ import { Map, MapCameraChangedEvent } from "@vis.gl/react-google-maps";
 import PoiMarkers from "@/components/map/PoiMarkers";
 import ContextualMenu from "@/components/map/menu/ContextualMenu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
-/* import MapSubtitles from "./MapSubtitles"; */
+import MapSubtitles from "./MapSubtitles";
+import { calculateAveragePoint, filterByRegularSamples } from "@/lib/utils";
+
+import LoadingMap from "./LoadingMap";
 
 export default function TodabioMap({ mapId }: { mapId: string }) {
-  const { regularSamples } = useGlobalSamples();
+  let { filteredSamples, isLoading } = useGlobalSamples();
+  const status = isLoading ? "Loading" : "Ready";
+
+  console.log("Status no mapa", status);
+  console.log("filteredSamples no mapa", filteredSamples);
+
+  // Verifique se está carregando e retorne antes de renderizar o mapa
+  if (isLoading) {
+    return (
+      <>
+        <LoadingMap />
+      </>
+    );
+  }
+
+  const regularSamples = filterByRegularSamples(filteredSamples);
+  const mapCenter = calculateAveragePoint(regularSamples);
   return (
     <Map
       mapId={mapId}
       style={{ flexGrow: 1 }}
-      defaultCenter={{ lat: -1.4558, lng: -48.4902 }}
-      defaultZoom={5}
+      defaultCenter={mapCenter}
+      defaultZoom={8}
       gestureHandling={"greedy"}
       disableDefaultUI={true}
       onCameraChanged={(ev: MapCameraChangedEvent) =>
@@ -25,7 +44,7 @@ export default function TodabioMap({ mapId }: { mapId: string }) {
       }
     >
       <ContextualMenu />
-      {/* <MapSubtitles /> */}
+      <MapSubtitles regularSamples={regularSamples} />
       <PoiMarkers pois={regularSamples} />
     </Map>
   );

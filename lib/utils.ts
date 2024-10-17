@@ -1,5 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { getBetaAnalysisByID, getBetaMarkerAnalysis } from "./data";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -15,14 +16,29 @@ export function formatDate(dateString: string | null): string {
   return `${day}/${month}/${year}`;
 }
 
-export function getMaxGroup(dapc?: {
-  [key: string]: number;
-}): string | undefined {
-  if (!dapc || Object.keys(dapc).length === 0) return undefined;
+export function getMaxGroup(dapc: DAPC): { key: string; index: number } | null {
+  if (!Array.isArray(dapc) || dapc.length === 0) {
+    return null; // Retorna null se dapc não for um array ou estiver vazio
+  }
 
-  return Object.keys(dapc).reduce((maxGroup, currentGroup) => {
-    return dapc[currentGroup] > dapc[maxGroup] ? currentGroup : maxGroup;
+  let maxIndex = 0;
+  let maxKey = Object.keys(dapc[0])[0]; // Pega a primeira chave do primeiro objeto
+  let maxValue = dapc[0][maxKey]; // Armazena o valor associado à chave
+
+  // Itera sobre cada item no array
+  dapc.forEach((item, index) => {
+    const currentKey = Object.keys(item)[0]; // Assume que cada objeto tem apenas uma chave
+    const currentValue = item[currentKey];
+
+    // Atualiza maxIndex, maxKey e maxValue se o valor atual for maior
+    if (currentValue > maxValue) {
+      maxIndex = index;
+      maxKey = currentKey;
+      maxValue = currentValue; // Atualiza o valor máximo
+    }
   });
+
+  return { key: maxKey, index: maxIndex };
 }
 
 export const groupColors: {
@@ -77,17 +93,29 @@ type NormalizedValues = {
   [key: string]: [number, number];
 };
 export const getValuesWithNormalization = (data: DAPC): NormalizedValues => {
-  const maxValue = Math.max(...Object.values(data)); // Encontra o valor máximo
+  if (!Array.isArray(data) || data.length === 0) {
+    return {}; // Retorna um objeto vazio se data não for um array ou estiver vazio
+  }
+
+  // Obtém todos os valores do array e mapeia para um único objeto
+  const combinedValues: { [key: string]: number } = {};
+
+  data.forEach((item) => {
+    const key = Object.keys(item)[0]; // Assume que cada objeto tem apenas uma chave
+    combinedValues[key] = item[key]; // Adiciona o valor ao objeto combinado
+  });
+
+  const maxValue = Math.max(...Object.values(combinedValues)); // Encontra o valor máximo
   const result: NormalizedValues = {}; // Cria um objeto para armazenar os resultados
 
-  for (const key in data) {
-    const normalizedValue = ((data[key] / maxValue) * 100).toFixed(2); // Normaliza
-    result[key] = [data[key], parseFloat(normalizedValue)]; // Adiciona o valor e o valor normalizado
+  for (const key in combinedValues) {
+    const normalizedValue = ((combinedValues[key] / maxValue) * 100).toFixed(2); // Normaliza
+    result[key] = [combinedValues[key], parseFloat(normalizedValue)]; // Adiciona o valor e o valor normalizado
   }
 
   // Ordena os resultados do maior para o menor com base no valor normalizado
   const sortedResult = Object.entries(result).sort(
-    ([, a], [, b]) => b[1] - a[1]
+    ([, a], [, b]) => b[1][1] - a[1][1]
   );
 
   // Converte de volta para um objeto
@@ -96,7 +124,8 @@ export const getValuesWithNormalization = (data: DAPC): NormalizedValues => {
 
   return orderedNormalizedValues; // Retorna o objeto resultante ordenado
 };
-export function similarSamples(
+
+/* export function similarSamples(
   samples: Sample[],
   marker: string,
   largestGroup: string
@@ -123,7 +152,7 @@ export function similarSamples(
 
   return similarSamples;
 }
-
+ */
 type DataPoint = string[]; // Define o tipo para cada ponto de dados, que é um array de strings
 
 interface Result {
@@ -221,3 +250,119 @@ export const pipelineURL = {
   "01": "https://github.com/Todabio/Todabio",
   "02": "https://github.com/Todabio/Pipeline_OTUsDB",
 };
+
+export function interpolateColors(steps: number) {
+  const stepFactor = 1 / (steps - 1);
+  const interpolatedColors: string[] = [];
+  const startColor = [188, 255, 0, 1];
+  const endColor = [0, 54, 92, 1];
+  for (let i = 0; i < steps; i++) {
+    const interpolatedColor = interpolateColor(
+      startColor,
+      endColor,
+      stepFactor * i
+    );
+    interpolatedColors.push(`rgba(${interpolatedColor.join(", ")})`);
+  }
+
+  return interpolatedColors;
+}
+
+export function interpolateColor(
+  startColor: number[],
+  endColor: number[],
+  factor: number
+) {
+  const result = startColor.slice();
+
+  for (let i = 0; i < 4; i++) {
+    result[i] = Math.round(
+      startColor[i] + factor * (endColor[i] - startColor[i])
+    );
+  }
+
+  return result;
+}
+
+export function betaContainsDAPC(
+  betaID: BetaAnalysis["ID"],
+  marker: MarkerType
+) {
+  const betaAnalysis = getBetaAnalysisByID(betaID);
+  const betaMarkerAnalysis =
+    betaAnalysis && getBetaMarkerAnalysis(betaAnalysis, marker);
+
+  const DAPC_CSV_URL = betaMarkerAnalysis?.DAPC_CSV_probabilities_URL;
+
+  const containsDAPC = DAPC_CSV_URL != null;
+
+  return { DAPC_CSV_URL, containsDAPC };
+}
+
+export function createDapcObjects(
+  inputArray: Array<{ "": string; [key: string]: string }>
+): Array<{ id: string; dapc: Array<{ [key: string]: number }> }> {
+  return inputArray.map((item) => {
+    const id = item[""].split("_")[0];
+    const dapcArray = Object.entries(item)
+      .filter(([key]) => key !== "")
+      .map(([key, value]) => ({ [key]: Number(value) }));
+
+    return {
+      id: id,
+      dapc: dapcArray,
+    };
+  });
+}
+
+export function mergeDapcIntoSamples(
+  regularSamples: Sample[],
+  DAPC_Samples: any
+): Sample[] {
+  const result: Sample[] = [];
+
+  const dapcMap = new Map<string, number[]>();
+
+  for (const b of DAPC_Samples) {
+    dapcMap.set(b.id, b.dapc);
+  }
+
+  for (const a of regularSamples) {
+    const dapc = dapcMap.get(a.Elabjournal_Sample_ID);
+
+    result.push({ ...a, dapc: dapc as DAPC });
+  }
+
+  return result;
+}
+
+export function filterByRegularSamples(
+  samples: RegularSample[] | ControlSample[]
+) {
+  return samples.filter((sample) => sample.Sample_Latitude !== null);
+}
+export function filterByControlSamples(
+  samples: RegularSample[] | ControlSample[]
+) {
+  return samples.filter((sample) => sample.Sample_Latitude === null);
+}
+
+export function calculateAveragePoint(points: any) {
+  if (!points || points.length === 0) {
+    return { lat: -1.4558, lng: -48.4902 };
+  }
+
+  const totalLatitude = points.reduce(
+    (sum: any, point: any) => sum + point.Sample_Latitude,
+    0
+  );
+  const totalLongitude = points.reduce(
+    (sum: any, point: any) => sum + point.Sample_Longitude,
+    0
+  );
+
+  const averageLatitude = totalLatitude / points.length;
+  const averageLongitude = totalLongitude / points.length;
+
+  return { lat: averageLatitude, lng: averageLongitude };
+}

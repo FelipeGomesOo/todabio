@@ -5,7 +5,7 @@ import { AdvancedMarker, Pin, useMap } from "@vis.gl/react-google-maps";
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import type { Marker } from "@googlemaps/markerclusterer";
 import Point from "@/components/map/Point";
-import { getMaxGroup } from "@/lib/utils";
+import { getMaxGroup, interpolateColors } from "@/lib/utils";
 import useCurrentGlobalMarker from "@/hooks/useCurrentGlobalMarker";
 const PoiMarkers = (props: { pois: RegularSample[] }) => {
   const currentGlobalMarker = useCurrentGlobalMarker();
@@ -40,8 +40,8 @@ const PoiMarkers = (props: { pois: RegularSample[] }) => {
 
   // Update markers, if the markers array has changed
   useEffect(() => {
-    clusterer.current?.clearMarkers();
-    clusterer.current?.addMarkers(Object.values(markers));
+    //clusterer.current?.clearMarkers();
+    //clusterer.current?.addMarkers(Object.values(markers));
   }, [markers]);
 
   const setMarkerRef = (marker: Marker | null, key: string) => {
@@ -58,23 +58,35 @@ const PoiMarkers = (props: { pois: RegularSample[] }) => {
       }
     });
   };
+
+  const dapcLength = props.pois[0].dapc?.length || 0;
+
+  const DAPCColors = dapcLength > 0 && interpolateColors(dapcLength);
+
+  function getPointColor(poi: RegularSample) {
+    if (poi.dapc && Object.keys(poi.dapc).length > 0) {
+      const DAPCGrouping = getMaxGroup(poi.dapc);
+      if (DAPCGrouping && "index" in DAPCGrouping) {
+        const { index } = DAPCGrouping;
+        if (Array.isArray(DAPCColors)) {
+          return DAPCColors[index];
+        }
+      }
+    } else {
+      return "#3355FF";
+    }
+  }
   return (
     <>
-      {props.pois.map((poi: RegularSample) => (
+      {props.pois.map((poi: RegularSample, index: number) => (
         <AdvancedMarker
-          key={poi.Elabjournal_Sample_ID}
+          key={index}
           position={{ lat: poi.Sample_Latitude, lng: poi.Sample_Longitude }}
           ref={(marker) => setMarkerRef(marker, poi.Elabjournal_Sample_ID)}
           clickable={true}
           onClick={(ev) => handleClick(ev, poi.Elabjournal_Sample_ID)}
         >
-          <Point
-            grouping={getMaxGroup(
-              poi.Sample_Markers.find(
-                (marker) => marker.Marker === currentGlobalMarker
-              )?.DAPC || {}
-            )}
-          />
+          <Point background={getPointColor(poi)} />
         </AdvancedMarker>
       ))}
     </>

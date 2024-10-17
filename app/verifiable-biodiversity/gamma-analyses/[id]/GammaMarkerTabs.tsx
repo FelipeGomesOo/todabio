@@ -11,8 +11,14 @@ export default function GammaMarkerTabs({
 }: {
   analysis: GammaAnalysis;
 }) {
-  const { setCurrentGamma, selectedMarker, setSelectedMarker } =
-    useGlobalSamples();
+  const {
+    setCurrentGamma,
+    setCurrentBeta,
+    selectedMarker,
+    setSelectedMarker,
+    setIsLoading,
+    currentBeta,
+  } = useGlobalSamples();
 
   const defaultMarker: MarkerType =
     selectedMarker === "All Markers"
@@ -22,7 +28,13 @@ export default function GammaMarkerTabs({
   useEffect(() => {
     setCurrentGamma(analysis.ID);
     setSelectedMarker(defaultMarker);
+    //setCurrentBeta("All Betas");
   }, [analysis]);
+  if (currentBeta !== "All Betas") {
+    setIsLoading(true);
+    setCurrentBeta("All Betas");
+    console.log("Gamma Page changed beta to All Betas");
+  }
 
   return (
     <Tabs defaultValue={defaultMarker} className="w-full">
