@@ -366,3 +366,33 @@ export function calculateAveragePoint(points: any) {
 
   return { lat: averageLatitude, lng: averageLongitude };
 }
+
+export function applyJitter(
+  samples: RegularSample[],
+  jitterAmountMeters: number
+) {
+  const latitudeToMeters = 111320; // 1 grau de latitude em metros
+  const longitudeToMeters = 111320; // 1 grau de longitude em metros na equatorial (média)
+
+  const jitterAmountLat = jitterAmountMeters / latitudeToMeters; // Converter para graus
+  const jitterAmountLon =
+    jitterAmountMeters /
+    (longitudeToMeters *
+      Math.cos(samples[0].Sample_Latitude * (Math.PI / 180))); // Ajuste para longitude
+
+  return samples.map((sample) => {
+    const jitteredLat =
+      sample.Sample_Latitude +
+      (Math.random() * jitterAmountLat - jitterAmountLat / 2);
+    const jitteredLon =
+      sample.Sample_Longitude +
+      (Math.random() * jitterAmountLon - jitterAmountLon / 2);
+
+    // Retorna um novo objeto com o valor jitter aplicado
+    return {
+      ...sample,
+      Sample_Latitude: jitteredLat,
+      Sample_Longitude: jitteredLon,
+    };
+  });
+}

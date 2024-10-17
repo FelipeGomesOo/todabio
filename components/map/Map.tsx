@@ -4,7 +4,11 @@ import PoiMarkers from "@/components/map/PoiMarkers";
 import ContextualMenu from "@/components/map/menu/ContextualMenu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
 import MapSubtitles from "./MapSubtitles";
-import { calculateAveragePoint, filterByRegularSamples } from "@/lib/utils";
+import {
+  applyJitter,
+  calculateAveragePoint,
+  filterByRegularSamples,
+} from "@/lib/utils";
 
 import LoadingMap from "./LoadingMap";
 
@@ -24,7 +28,10 @@ export default function TodabioMap({ mapId }: { mapId: string }) {
     );
   }
 
-  const regularSamples = filterByRegularSamples(filteredSamples);
+  const regularSamples = applyJitter(
+    filterByRegularSamples(filteredSamples),
+    3000
+  );
   const mapCenter = calculateAveragePoint(regularSamples);
   return (
     <Map
