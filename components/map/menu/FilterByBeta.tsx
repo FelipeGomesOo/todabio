@@ -14,8 +14,7 @@ import { getAllBetaAnalyses, getBetaAnalysisByID } from "@/lib/data";
 import { useRouter } from "next/navigation";
 
 export default function FilterByBeta() {
-  const { currentBeta, setCurrentBeta, currentGamma, selectedMarker } =
-    useGlobalSamples();
+  const { currentBeta, currentGamma } = useGlobalSamples();
   const router = useRouter();
   const allBetas = { ID: "All Betas", Title: "All Betas" };
   const currentBetaAnalysis = getBetaAnalysisByID(currentBeta) || allBetas;

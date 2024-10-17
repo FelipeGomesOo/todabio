@@ -1,5 +1,4 @@
 import {
-  groupColors,
   getValuesWithNormalization,
   interpolateColors,
   roundPercentage,

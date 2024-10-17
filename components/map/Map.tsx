@@ -13,7 +13,7 @@ import {
 import LoadingMap from "./LoadingMap";
 
 export default function TodabioMap({ mapId }: { mapId: string }) {
-  let { filteredSamples, isLoading } = useGlobalSamples();
+  const { filteredSamples, isLoading } = useGlobalSamples();
   const status = isLoading ? "Loading" : "Ready";
 
   console.log("Status no mapa", status);

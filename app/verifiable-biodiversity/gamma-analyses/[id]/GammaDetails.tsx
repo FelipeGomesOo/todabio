@@ -1,7 +1,7 @@
 "use client";
 import { Table, TableBody } from "@/components/ui/table";
 import BioRow from "@/components/map/BioRow";
-import { useEffect, useMemo } from "react";
+
 import { pipelineURL } from "@/lib/utils";
 
 export default function GammaDetails({

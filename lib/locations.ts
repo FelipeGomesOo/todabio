@@ -1,4 +1,4 @@
-const Samples: (RegularSample | ControlSample)[] = [
+const Samples: Sample[] = [
   {
     Sample_Latitude: -9.612277,
     Sample_Longitude: -67.884401,

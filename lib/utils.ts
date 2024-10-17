@@ -34,7 +34,7 @@ export function getMaxGroup(dapc: DAPC): { key: string; index: number } | null {
     if (currentValue > maxValue) {
       maxIndex = index;
       maxKey = currentKey;
-      maxValue = currentValue; // Atualiza o valor máximo
+      maxValue = currentValue;
     }
   });
 
@@ -193,11 +193,11 @@ export function extractDepthsAndIterations(input: DataPoint[]): Result {
     maxIterations,
   };
 }
-
+/* 
 export function getSampleValues(
   input: DataPoint[],
-  depths: any,
-  iterations: any
+  depths: string,
+  iterations: number
 ) {
   const last_key = depths.length * iterations;
   const sampleValues = input[1].slice(1, last_key + 1);
@@ -225,7 +225,7 @@ export function getDataPoints(samples: any) {
 
   // console.log("dataPoints", dataPoints);
   return dataPoints;
-}
+} */
 
 export function convertArrayToNumbers(
   inputArray: (string | number)[]
@@ -333,14 +333,10 @@ export function mergeDapcIntoSamples(
   return result;
 }
 
-export function filterByRegularSamples(
-  samples: RegularSample[] | ControlSample[]
-) {
+export function filterByRegularSamples(samples: Sample[]) {
   return samples.filter((sample) => sample.Sample_Latitude !== null);
 }
-export function filterByControlSamples(
-  samples: RegularSample[] | ControlSample[]
-) {
+export function filterByControlSamples(samples: Sample[]) {
   return samples.filter((sample) => sample.Sample_Latitude === null);
 }
 
@@ -364,20 +360,21 @@ export function calculateAveragePoint(points: any) {
   return { lat: averageLatitude, lng: averageLongitude };
 }
 
-export function applyJitter(
-  samples: RegularSample[],
-  jitterAmountMeters: number
-) {
-  const latitudeToMeters = 111320; // 1 grau de latitude em metros
-  const longitudeToMeters = 111320; // 1 grau de longitude em metros na equatorial (média)
-
-  const jitterAmountLat = jitterAmountMeters / latitudeToMeters; // Converter para graus
-  const jitterAmountLon =
-    jitterAmountMeters /
-    (longitudeToMeters *
-      Math.cos(samples[0].Sample_Latitude * (Math.PI / 180))); // Ajuste para longitude
+export function applyJitter(samples: Sample[], jitterAmountMeters: number) {
+  const latitudeToMeters = 111320;
+  const longitudeToMeters = 111320;
 
   return samples.map((sample) => {
+    if (sample.Sample_Latitude === null || sample.Sample_Longitude === null) {
+      // Retorna a amostra inalterada se latitude ou longitude forem nulos
+      return sample;
+    }
+
+    const jitterAmountLat = jitterAmountMeters / latitudeToMeters; // Converter para graus
+    const jitterAmountLon =
+      jitterAmountMeters /
+      (longitudeToMeters * Math.cos(sample.Sample_Latitude * (Math.PI / 180))); // Ajuste para longitude
+
     const jitteredLat =
       sample.Sample_Latitude +
       (Math.random() * jitterAmountLat - jitterAmountLat / 2);
@@ -394,9 +391,7 @@ export function applyJitter(
   });
 }
 
-export function getHourAndMinute(
-  dateString: RegularSample["Timestamp_Sampling"]
-) {
+export function getHourAndMinute(dateString: Sample["Timestamp_Sampling"]) {
   if (!dateString) {
     return "00:00";
   }

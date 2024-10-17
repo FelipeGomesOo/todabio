@@ -1,3 +1,4 @@
+"use client";
 import useFetchCSV from "@/hooks/useFetchCSV";
 import {
   getAllGammaAnalyses,
@@ -21,7 +22,7 @@ interface GlobalSamplesContextType {
   setCurrentGamma: React.Dispatch<React.SetStateAction<GammaAnalysis["ID"]>>;
   currentBeta: BetaAnalysis["ID"];
   setCurrentBeta: React.Dispatch<React.SetStateAction<BetaAnalysis["ID"]>>;
-  filteredSamples: RegularSample[] | ControlSample[] | Sample[];
+  filteredSamples: Sample[];
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -41,9 +42,7 @@ export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
   const [currentBeta, setCurrentBeta] =
     useState<BetaAnalysis["ID"]>("All Betas");
   const { fetchCsv } = useFetchCSV();
-  const [filteredSamples, setFilteredSamples] = useState<
-    RegularSample[] | ControlSample[] | Sample[]
-  >([]);
+  const [filteredSamples, setFilteredSamples] = useState<Sample[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {

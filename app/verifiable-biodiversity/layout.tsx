@@ -3,11 +3,7 @@ import TodabioMap from "@/components/map/Map";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { GlobalSamplesProvider } from "@/context/GlobalSamples";
 
-export default function MapLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function MapLayout({ children }: { children: React.ReactNode }) {
   const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API ?? "";
   const mapId = process.env.NEXT_PUBLIC_MAP_ID ?? "";
 

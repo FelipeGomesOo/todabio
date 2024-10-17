@@ -10,7 +10,6 @@ export default function BetaDetails({
 }) {
   const {
     Marker,
-    Samples_Names,
     Type,
     DAPC_SVG_compoplot_URL,
     DAPC_SVG_predefined_URL,

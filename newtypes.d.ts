@@ -1,3 +1,17 @@
+type Sample = {
+  "Depth_(m)": number | null | string;
+  Matrix: string;
+  Elabjournal_Sample_ID: string;
+  FASTQ_ID_Sequence_Provider: string;
+  Pipeline_01_Version: string;
+  Sample_Markers: SampleMarker[];
+  dapc?: DAPC;
+  Sample_Latitude: number | null;
+  Sample_Longitude: number | null;
+  Geohash: string | null;
+  Timestamp_Sampling: string | null;
+};
+
 type MarkerType =
   | "All Markers"
   | "12S"
@@ -11,7 +25,7 @@ type MarkerType =
   | "trnL"
   | "Other";
 
-interface SampleMarker {
+type SampleMarker = {
   Marker: MarkerType;
   FASTQ_Forward_URL: string;
   FASTQ_Reverse_URL: string;
@@ -28,30 +42,8 @@ interface SampleMarker {
   Shannon: number;
   Riqueza: number;
   Equidade: number;
-}
+};
 type DAPC = Array<{ [key: string]: number }> | undefined;
-
-interface Sample {
-  "Depth_(m)": number | null | string;
-  Matrix: string;
-  Elabjournal_Sample_ID: string;
-  FASTQ_ID_Sequence_Provider: string;
-  Pipeline_01_Version: string;
-  Sample_Markers: SampleMarker[];
-  dapc?: DAPC;
-}
-interface RegularSample extends Sample {
-  Sample_Latitude: number;
-  Sample_Longitude: number;
-  Geohash: string;
-  Timestamp_Sampling: string | null;
-}
-interface ControlSample extends Sample {
-  Sample_Latitude: null;
-  Sample_Longitude: null;
-  Geohash: null;
-  Timestamp_Sampling: null;
-}
 
 type BetaAnalysis = {
   ID: string;
@@ -143,5 +135,3 @@ type GammaMarkerAnalysis = {
   Pipeline_02_Version?: string | null;
   DB_Version?: string | null;
 };
-
-declare module "@canvasjs/react-charts";

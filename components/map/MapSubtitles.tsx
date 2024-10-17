@@ -8,7 +8,7 @@ type DAPC = {
 export default function MapSubtitles({
   regularSamples,
 }: {
-  regularSamples: RegularSample[];
+  regularSamples: Sample[];
 }) {
   const dapcExample: DAPC[] = regularSamples[0]?.dapc || [];
   if (dapcExample.length === 0) {
@@ -27,7 +27,7 @@ export default function MapSubtitles({
   return (
     <div className="absolute bottom-6 right-4 p-4 bg-white rounded-md flex-col justify-start items-start inline-flex">
       {dapcExample.map((line, index: number) => {
-        const [key, value] = Object.entries(line)[0];
+        const [key] = Object.entries(line)[0];
 
         return (
           <div key={index} className="items-center gap-2 inline-flex">

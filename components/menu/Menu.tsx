@@ -1,16 +1,13 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import Image from "next/image";
 import MobileMenu from "@/components/menu/MobileMenu";
 import { buttonVariants } from "@/components/ui/button";
 import LogoTodabio from "../svg/LogoTodabio";

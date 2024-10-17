@@ -1,5 +1,4 @@
-import GammaDetails from "./GammaDetails";
-import { getGammaAnalysisByID, getGammaMarkerAnalysis } from "@/lib/data";
+import { getGammaAnalysisByID } from "@/lib/data";
 import { ReaderIcon } from "@radix-ui/react-icons";
 import GammaMarkerTabs from "./GammaMarkerTabs";
 export default function GammaAnalisysPage({

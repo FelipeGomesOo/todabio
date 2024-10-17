@@ -70,7 +70,7 @@ export function getGammaMarkerAnalysis(
 
 export function getSamplesByAnalysis(
   analysis: GammaMarkerAnalysis | BetaMarkerAnalysis
-): RegularSample[] | ControlSample[] {
+): Sample[] {
   if (!Array.isArray(analysis.Samples_Names)) {
     console.warn("Análise inválida: Samples_Names não é um array.");
     return [];
@@ -96,13 +96,13 @@ export function getSamplesByAnalysis(
     console.warn("Nenhuma amostra válida encontrada.");
   }
 
-  return validSamples as RegularSample[] | ControlSample[];
+  return validSamples as Sample[];
 }
 
 export function getGammaSamples(
   gammaID: GammaAnalysis["ID"],
   marker: MarkerType
-): RegularSample[] | ControlSample[] {
+): Sample[] {
   try {
     const gammaAnalysis = getGammaAnalysisByID(gammaID);
     if (!gammaAnalysis) {
@@ -124,7 +124,7 @@ export function getGammaSamples(
 export function getBetaSamples(
   betaID: BetaAnalysis["ID"],
   marker: MarkerType
-): RegularSample[] | ControlSample[] {
+): Sample[] {
   try {
     const betaAnalysis = getBetaAnalysisByID(betaID);
     if (!betaAnalysis) {
@@ -142,10 +142,7 @@ export function getBetaSamples(
     return [];
   }
 }
-export function getSamplesWithDAPC(
-  CSVData: any,
-  samples: RegularSample[] | ControlSample[]
-) {
+export function getSamplesWithDAPC(CSVData: any, samples: Sample[]) {
   // Cria os objetos DAPC
   const DAPC_samples = createDapcObjects(CSVData);
   console.log("DAPC Samples From CSV", DAPC_samples);

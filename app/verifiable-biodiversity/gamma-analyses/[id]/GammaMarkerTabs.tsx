@@ -28,8 +28,7 @@ export default function GammaMarkerTabs({
   useEffect(() => {
     setCurrentGamma(analysis.ID);
     setSelectedMarker(defaultMarker);
-    //setCurrentBeta("All Betas");
-  }, [analysis]);
+  }, [analysis, defaultMarker, setCurrentGamma, setSelectedMarker]);
   if (currentBeta !== "All Betas") {
     setIsLoading(true);
     setCurrentBeta("All Betas");
@@ -65,6 +64,7 @@ export default function GammaMarkerTabs({
                     <BetaAnalysisCard
                       analysis={analysis}
                       marker={gammaMarker.Marker}
+                      key={index}
                     />
                   </>
                 )

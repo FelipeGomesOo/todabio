@@ -1,6 +1,5 @@
 "use client";
-import { useCallback } from "react";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -14,28 +13,7 @@ import {
 import { useGlobalSamples } from "@/context/GlobalSamples";
 
 export default function FilterByMarker() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
   const { selectedMarker, setSelectedMarker } = useGlobalSamples();
-
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      params.set(name, value);
-
-      return params.toString();
-    },
-    [searchParams]
-  );
-
-  const onMarkerChange = (marker: string) => {
-    if (marker === "All Markers") {
-      router.push(`${pathname}?${createQueryString("marker", "All Markers")}`);
-    } else {
-      router.push(`${pathname}?${createQueryString("marker", marker)}`);
-    }
-  };
 
   const handleMarkerChange = (value: string) => {
     setSelectedMarker(value as MarkerType);

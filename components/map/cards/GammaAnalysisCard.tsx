@@ -17,8 +17,11 @@ export default function GammaAnalysisCard({
         <small className="text-sm text-primary/70">Gamma</small>
       </header>
       <div className="justify-start items-start gap-1 flex flex-wrap">
-        {GammaMarkers.map((analysis) => (
-          <Badge variant="secondary">{`${analysis.Marker}: ${analysis.Samples_Names.length}`}</Badge>
+        {GammaMarkers.map((analysis, i) => (
+          <Badge
+            key={i}
+            variant="secondary"
+          >{`${analysis.Marker}: ${analysis.Samples_Names.length}`}</Badge>
         ))}
       </div>
     </Link>

@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { getBetaAnalysesByMarker, getBetaMarkerAnalysis } from "@/lib/data";
+import { getBetaMarkerAnalysis } from "@/lib/data";
 import Link from "next/link";
 export default function BetaAnalysisCard({
   analysis,
@@ -9,7 +9,7 @@ export default function BetaAnalysisCard({
   marker?: MarkerType;
 }) {
   const { ID, Title, Description, BetaMarkers } = analysis;
-  let markerAnalysis = marker && getBetaMarkerAnalysis(analysis, marker);
+  const markerAnalysis = marker && getBetaMarkerAnalysis(analysis, marker);
 
   return (
     <Link
@@ -25,8 +25,11 @@ export default function BetaAnalysisCard({
           <Badge>{`${markerAnalysis.Marker}: ${markerAnalysis.Samples_Names.length}`}</Badge>
         )}
         {!markerAnalysis &&
-          BetaMarkers.map((analysis) => (
-            <Badge variant="secondary">{`${analysis.Marker}: ${analysis.Samples_Names.length}`}</Badge>
+          BetaMarkers.map((analysis, i) => (
+            <Badge
+              key={i}
+              variant="secondary"
+            >{`${analysis.Marker}: ${analysis.Samples_Names.length}`}</Badge>
           ))}
       </div>
     </Link>

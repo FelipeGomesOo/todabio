@@ -15,16 +15,14 @@ export default function SampleMarkersTabs({
   Sample_Markers,
 }: {
   Sample_Markers: SampleMarker[];
-  Sample: RegularSample | ControlSample | undefined;
+  Sample: Sample;
 }) {
-  const { selectedMarker, setSelectedMarker, filteredSamples } =
-    useGlobalSamples();
+  const { selectedMarker, setSelectedMarker } = useGlobalSamples();
   console.log(selectedMarker);
   const defaultMarker: MarkerType =
     selectedMarker === "All Markers"
       ? ("12S" as MarkerType)
       : (selectedMarker as MarkerType);
-  console.log("Sample.dapc");
 
   return (
     <Tabs defaultValue={defaultMarker} className="w-full">

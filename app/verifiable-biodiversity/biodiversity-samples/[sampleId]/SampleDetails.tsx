@@ -8,9 +8,28 @@ import BioRow from "@/components/map/BioRow";
 import { pipelineURL } from "@/lib/utils";
 import { useGlobalSamples } from "@/context/GlobalSamples";
 import { useMap } from "@vis.gl/react-google-maps";
-export default function SampleDetails({ sampleId }: { sampleId: string }) {
+import { useCallback, useEffect } from "react";
+
+export default function SampleDetails({
+  sampleId,
+}: {
+  sampleId: Sample["Elabjournal_Sample_ID"];
+}) {
   const sample = getSampleById(sampleId);
   const { filteredSamples } = useGlobalSamples();
+  const map = useMap();
+
+  const addaptMap = useCallback(() => {
+    if (map && sample) {
+      const { Sample_Latitude = 0, Sample_Longitude = 0 } = sample;
+      map.panTo({ lat: Sample_Latitude || 0, lng: Sample_Longitude || 0 });
+      map.setZoom(14);
+    }
+  }, [map, sample]);
+
+  useEffect(() => {
+    addaptMap();
+  }, [addaptMap]);
 
   if (!sample) {
     return <div>Sample not found</div>;
@@ -26,16 +45,13 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
     FASTQ_ID_Sequence_Provider,
     Pipeline_01_Version,
   } = sample;
+
   const locationString = `${Sample_Latitude},${Sample_Longitude}`;
+
   const MergedSample = filteredSamples.find(
     (sample) => sample.Elabjournal_Sample_ID === sampleId
-  ) as RegularSample | ControlSample | undefined;
+  ) as Sample;
 
-  const map = useMap();
-  if (map) {
-    map.panTo({ lat: Sample_Latitude || 0, lng: Sample_Longitude || 0 });
-    map.setZoom(14);
-  }
   return (
     <div className="w-full overflow-hidden flex-col gap-8 flex items-start justify-start py-4">
       <header className="gap-4 w-full flex flex-col items-start justify-start">

@@ -29,8 +29,8 @@ export default function VerifiableBiodiversityPage() {
         <div className="flex-col gap-2 flex">
           <h3 className="text-base font-bold font-sans mb-2">Gamma Analyses</h3>
           <div className="w-full flex-col gap-4 flex">
-            {gammaAnalyses.map((analysis: GammaAnalysis) => (
-              <GammaAnalysisCard analysis={analysis} />
+            {gammaAnalyses.map((analysis) => (
+              <GammaAnalysisCard key={analysis.ID} analysis={analysis} />
             ))}
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function VerifiableBiodiversityPage() {
         <div className="flex-col gap-2 flex">
           <h3 className="text-base font-bold font-sans mb-2">Beta Analyses</h3>
           <div className="w-full flex-col gap-4 flex">
-            {betaAnalyses.map((analysis: BetaAnalysis) => (
+            {betaAnalyses.map((analysis) => (
               <>
                 <BetaAnalysisCard analysis={analysis} />
               </>

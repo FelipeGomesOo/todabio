@@ -1,5 +1,3 @@
-import { groupColors, interpolateColors } from "@/lib/utils";
-
 export default function Point({
   background,
 }: {

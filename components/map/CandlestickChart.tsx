@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+/* import React, { useEffect, useState, useRef } from "react";
 import { usePapaParse } from "react-papaparse";
 import CanvasJSReact from "@canvasjs/react-charts";
-import { getDataPoints } from "@/lib/utils";
-const CanvasJSChart = CanvasJSReact.CanvasJSChart;
+import { getDataPoints } from "@/lib/utils"; */
+//const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default function CandlestickChart() {
-  const { readRemoteFile } = usePapaParse();
+  /*  const { readRemoteFile } = usePapaParse();
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -60,13 +60,16 @@ export default function CandlestickChart() {
         dataPoints: dataPoints,
       },
     ],
-  };
+  }; */
   return (
-    <div className="w-[70%] h-full grow flex items-center self-center">
+    <>
+      {/* <div className="w-[70%] h-full grow flex items-center self-center">
       <CanvasJSChart
         options={options}
         onRef={(ref: null) => (chartRef.current = ref)}
       />
-    </div>
+    </div> */}
+      a
+    </>
   );
 }
