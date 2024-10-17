@@ -58,17 +58,17 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
               badgeContent={locationString}
             />
             <BioRow
-              label="Longitude"
-              type={"badge"}
-              obj={Sample_Longitude}
-              badgeContent={Sample_Longitude}
-            />
-            <BioRow
               label="Date of collection"
               type={"badge"}
               obj={Timestamp_Sampling}
               badgeContent={formatDate(Timestamp_Sampling)}
             />
+            {/* <BioRow
+              label="Time of collection"
+              type={"badge"}
+              obj={Timestamp_Sampling}
+              badgeContent={getHourAndMinute(Timestamp_Sampling)}
+            /> */}
             <BioRow
               label="FASTQ ID"
               type={"badge"}

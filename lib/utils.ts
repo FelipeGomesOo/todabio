@@ -396,3 +396,23 @@ export function applyJitter(
     };
   });
 }
+
+export function getHourAndMinute(
+  dateString: RegularSample["Timestamp_Sampling"]
+) {
+  if (!dateString) {
+    return "00:00";
+  }
+
+  const formattedString = dateString.replace("T", " ").replace("-", ":");
+  const date = new Date(formattedString);
+
+  if (isNaN(date.getTime())) {
+    return "00:00";
+  }
+
+  const hours = String(date.getHours()).padStart(2, "0");
+  const minutes = String(date.getMinutes()).padStart(2, "0");
+
+  return `${hours}:${minutes}`;
+}
