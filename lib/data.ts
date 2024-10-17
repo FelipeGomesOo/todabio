@@ -70,7 +70,7 @@ export function getGammaMarkerAnalysis(
 
 export function getSamplesByAnalysis(
   analysis: GammaMarkerAnalysis | BetaMarkerAnalysis
-) {
+): RegularSample[] | ControlSample[] {
   if (!Array.isArray(analysis.Samples_Names)) {
     console.warn("Análise inválida: Samples_Names não é um array.");
     return [];
@@ -96,7 +96,7 @@ export function getSamplesByAnalysis(
     console.warn("Nenhuma amostra válida encontrada.");
   }
 
-  return validSamples;
+  return validSamples as RegularSample[] | ControlSample[];
 }
 
 export function getGammaSamples(

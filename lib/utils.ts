@@ -92,37 +92,34 @@ export const currentMarker = "12S";
 type NormalizedValues = {
   [key: string]: [number, number];
 };
-export const getValuesWithNormalization = (data: DAPC): NormalizedValues => {
+
+export const getValuesWithNormalization = (
+  data: Record<string, number>[]
+): NormalizedValues => {
   if (!Array.isArray(data) || data.length === 0) {
-    return {}; // Retorna um objeto vazio se data não for um array ou estiver vazio
+    return {};
   }
 
-  // Obtém todos os valores do array e mapeia para um único objeto
   const combinedValues: { [key: string]: number } = {};
 
   data.forEach((item) => {
-    const key = Object.keys(item)[0]; // Assume que cada objeto tem apenas uma chave
-    combinedValues[key] = item[key]; // Adiciona o valor ao objeto combinado
+    const key = Object.keys(item)[0];
+    combinedValues[key] = item[key];
   });
 
-  const maxValue = Math.max(...Object.values(combinedValues)); // Encontra o valor máximo
-  const result: NormalizedValues = {}; // Cria um objeto para armazenar os resultados
+  const maxValue = Math.max(...Object.values(combinedValues));
+  const result: NormalizedValues = {};
 
   for (const key in combinedValues) {
-    const normalizedValue = ((combinedValues[key] / maxValue) * 100).toFixed(2); // Normaliza
-    result[key] = [combinedValues[key], parseFloat(normalizedValue)]; // Adiciona o valor e o valor normalizado
+    const normalizedValue = ((combinedValues[key] / maxValue) * 100).toFixed(2);
+    result[key] = [combinedValues[key], parseFloat(normalizedValue)];
   }
 
-  // Ordena os resultados do maior para o menor com base no valor normalizado
   const sortedResult = Object.entries(result).sort(
-    ([, a], [, b]) => b[1][1] - a[1][1]
+    ([, a], [, b]) => b[1] - a[1]
   );
 
-  // Converte de volta para um objeto
-  const orderedNormalizedValues: NormalizedValues =
-    Object.fromEntries(sortedResult);
-
-  return orderedNormalizedValues; // Retorna o objeto resultante ordenado
+  return Object.fromEntries(sortedResult);
 };
 
 /* export function similarSamples(
