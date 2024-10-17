@@ -22,7 +22,7 @@ const PoiMarkers = (props: { pois: RegularSample[] }) => {
       if (!ev.latLng) return;
       console.log("marker clicked:", ev.latLng.toString());
       console.log("markers:", markers);
-      map.panTo(ev.latLng);
+      //map.panTo(ev.latLng);
       router.push(
         `/verifiable-biodiversity/biodiversity-samples/${hashId}${markerString}`
       );

@@ -416,3 +416,6 @@ export function getHourAndMinute(
 
   return `${hours}:${minutes}`;
 }
+export function roundPercentage(value: number, decimals = 2) {
+  return `${Number(value).toFixed(decimals)}`;
+}

@@ -1,33 +1,42 @@
 "use client";
-import { ArrowTopRightIcon, CopyIcon } from "@radix-ui/react-icons";
-import { Badge, badgeVariants } from "@/components/ui/badge";
-import { similarSamples, getMaxGroup } from "@/lib/utils";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import { badgeVariants } from "@/components/ui/badge";
+
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BioRow from "@/components/map/BioRow";
 
-/* import GroupChart from "@/components/map/GroupChart";
-import SimilarProfiles from "./SimilarProfiles"; */
+import GroupChart from "@/components/map/GroupChart";
+/* import SimilarProfiles from "./SimilarProfiles"; */
 import Link from "next/link";
 import { useGlobalSamples } from "@/context/GlobalSamples";
 export default function SampleMarkersTabs({
+  Sample,
   Sample_Markers,
 }: {
   Sample_Markers: SampleMarker[];
+  Sample: RegularSample | ControlSample | undefined;
 }) {
-  const { selectedMarker } = useGlobalSamples();
+  const { selectedMarker, setSelectedMarker, filteredSamples } =
+    useGlobalSamples();
   console.log(selectedMarker);
   const defaultMarker: MarkerType =
     selectedMarker === "All Markers"
       ? ("12S" as MarkerType)
       : (selectedMarker as MarkerType);
+  console.log("Sample.dapc");
+
   return (
     <Tabs defaultValue={defaultMarker} className="w-full">
       <section className="flex items-center justify-between">
         <h3 className="text-sm font-bold font-sans">Sample Markers</h3>
         <TabsList>
           {Sample_Markers.map((SampleMarker, index) => (
-            <TabsTrigger key={index} value={SampleMarker.Marker}>
+            <TabsTrigger
+              key={index}
+              value={SampleMarker.Marker}
+              onClick={() => setSelectedMarker(SampleMarker.Marker)}
+            >
               {SampleMarker.Marker}
             </TabsTrigger>
           ))}
@@ -142,6 +151,10 @@ export default function SampleMarkersTabs({
                   />
                 </TableBody>
               </Table>
+
+              {Sample && Sample.dapc && (
+                <GroupChart dapc={Sample.dapc} Marker={SampleMarker.Marker} />
+              )}
               {/* {SampleMarker.DAPC && (
             <>
               <GroupChart SampleMarker={SampleMarker} />{" "}

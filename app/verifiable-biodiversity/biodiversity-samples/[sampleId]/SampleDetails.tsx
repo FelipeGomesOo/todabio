@@ -6,8 +6,11 @@ import Image from "next/image";
 import SampleMarkersTabs from "@/components/map/SampleMarkersTabs";
 import BioRow from "@/components/map/BioRow";
 import { pipelineURL } from "@/lib/utils";
+import { useGlobalSamples } from "@/context/GlobalSamples";
+import { useMap } from "@vis.gl/react-google-maps";
 export default function SampleDetails({ sampleId }: { sampleId: string }) {
   const sample = getSampleById(sampleId);
+  const { filteredSamples } = useGlobalSamples();
 
   if (!sample) {
     return <div>Sample not found</div>;
@@ -24,6 +27,15 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
     Pipeline_01_Version,
   } = sample;
   const locationString = `${Sample_Latitude},${Sample_Longitude}`;
+  const MergedSample = filteredSamples.find(
+    (sample) => sample.Elabjournal_Sample_ID === sampleId
+  ) as RegularSample | ControlSample | undefined;
+
+  const map = useMap();
+  if (map) {
+    map.panTo({ lat: Sample_Latitude || 0, lng: Sample_Longitude || 0 });
+    map.setZoom(14);
+  }
   return (
     <div className="w-full overflow-hidden flex-col gap-8 flex items-start justify-start py-4">
       <header className="gap-4 w-full flex flex-col items-start justify-start">
@@ -91,7 +103,10 @@ export default function SampleDetails({ sampleId }: { sampleId: string }) {
           </TableBody>
         </Table>
       </header>
-      <SampleMarkersTabs Sample_Markers={Sample_Markers} />
+      <SampleMarkersTabs
+        Sample_Markers={Sample_Markers}
+        Sample={MergedSample}
+      />
     </div>
   );
 }

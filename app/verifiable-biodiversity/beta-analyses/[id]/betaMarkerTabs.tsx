@@ -2,7 +2,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BetaDetails from "./BetaDetails";
 import { useGlobalSamples } from "@/context/GlobalSamples";
-import { useEffect } from "react";
 
 export default function BetaMarkerTabs({
   analysis,
