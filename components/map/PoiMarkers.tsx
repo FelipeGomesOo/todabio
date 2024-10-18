@@ -17,7 +17,7 @@ const PoiMarkers = (props: { pois: Sample[] }) => {
       console.log("marker clicked:", ev.latLng.toString());
 
       //map.panTo(ev.latLng);
-      router.push(`/verifiable-biodiversity/biodiversity-samples/${hashId} `);
+      router.push(`/alpha-analyses/${hashId} `);
     },
     [map, router]
   );

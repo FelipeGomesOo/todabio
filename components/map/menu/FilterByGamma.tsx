@@ -17,7 +17,7 @@ export default function FilterByGamma() {
   const { currentGamma, setCurrentGamma } = useGlobalSamples();
   const router = useRouter();
   const handlegammaChange = (gammaID: GammaAnalysis["ID"]) => {
-    router.push(`/verifiable-biodiversity/gamma-analyses/${gammaID}`);
+    router.push(`/gamma-analyses/${gammaID}`);
     setCurrentGamma(gammaID);
   };
   const Gammanalyses = getAllGammaAnalyses();

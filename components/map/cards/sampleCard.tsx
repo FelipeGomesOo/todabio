@@ -6,7 +6,7 @@ export default function SampleCard({ sample }: { sample: Sample }) {
 
   return (
     <Link
-      href={`/verifiable-biodiversity/biodiversity-samples/${ID} `}
+      href={`/alpha-analyses/${ID} `}
       className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
     >
       <header>

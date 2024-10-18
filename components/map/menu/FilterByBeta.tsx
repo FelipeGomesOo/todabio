@@ -21,10 +21,10 @@ export default function FilterByBeta() {
 
   const handleBetaChange = (betaID: BetaAnalysis["ID"]) => {
     if (betaID !== "All Betas") {
-      router.push(`/verifiable-biodiversity/beta-analyses/${betaID}`);
+      router.push(`/beta-analyses/${betaID}`);
     } else {
       console.log("Pushed to Gamma Page");
-      router.push(`/verifiable-biodiversity/gamma-analyses/${currentGamma}`);
+      router.push(`/gamma-analyses/${currentGamma}`);
     }
     //setCurrentBeta(betaID);
   };

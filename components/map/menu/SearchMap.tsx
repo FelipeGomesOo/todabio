@@ -38,7 +38,7 @@ export default function SearchMap() {
             {filteredSamples.map((sample, index: number) => (
               <CommandItem key={index}>
                 <Link
-                  href={`/verifiable-biodiversity/biodiversity-samples/${sample.Elabjournal_Sample_ID}`}
+                  href={`/alpha-analyses/${sample.Elabjournal_Sample_ID}`}
                   className="flex items-center justify-between w-full gap-2"
                   onClick={() => handleClick()}
                 >

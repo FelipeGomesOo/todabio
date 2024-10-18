@@ -19,7 +19,7 @@ export default function Menu() {
         <Link href="/" className="shrink-0 basis-2/12">
           <LogoTodabio className="w-36 " />
         </Link>
-        <div className="basis-8/12">
+        {/* <div className="basis-8/12">
           <NavigationMenu className=" hidden md:block  ">
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -67,10 +67,10 @@ export default function Menu() {
         </div>
         <Link
           className={` basis-2/12 ${buttonVariants({ variant: "accent" })}`}
-          href="/verifiable-biodiversity"
+          href="/"
         >
           Verifiable biodiversity
-        </Link>
+        </Link> */}
       </div>
       <MobileMenu />
     </nav>

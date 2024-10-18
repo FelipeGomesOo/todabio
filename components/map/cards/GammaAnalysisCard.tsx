@@ -9,7 +9,7 @@ export default function GammaAnalysisCard({
 
   return (
     <Link
-      href={`/verifiable-biodiversity/gamma-analyses/${ID}`}
+      href={`/gamma-analyses/${ID}`}
       className="p-3.5 w-full min-w-[17rem] bg-white rounded-[5px] border   hover:shadow-md cursor-pointer transition-all flex flex-col gap-4"
     >
       <header>
