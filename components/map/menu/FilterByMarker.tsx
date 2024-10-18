@@ -11,13 +11,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
+import { getCurrentMarkers } from "@/lib/utils";
 
 export default function FilterByMarker() {
-  const { selectedMarker, setSelectedMarker } = useGlobalSamples();
+  const { selectedMarker, setSelectedMarker, currentGamma } =
+    useGlobalSamples();
 
   const handleMarkerChange = (value: string) => {
     setSelectedMarker(value as MarkerType);
   };
+  const currentMarkers = getCurrentMarkers(currentGamma);
 
   return (
     <DropdownMenu>
@@ -31,9 +34,12 @@ export default function FilterByMarker() {
           value={selectedMarker}
           onValueChange={handleMarkerChange}
         >
-          <DropdownMenuRadioItem value="12S">12S</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="16S">16S</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="COI">COI</DropdownMenuRadioItem>
+          {currentMarkers &&
+            currentMarkers.map((marker) => (
+              <DropdownMenuRadioItem key={marker} value={marker}>
+                {marker}
+              </DropdownMenuRadioItem>
+            ))}
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

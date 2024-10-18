@@ -15,7 +15,9 @@ type Sample = {
 type MarkerType =
   | "All Markers"
   | "12S"
+  | "12S-Vert"
   | "16S"
+  | "16S-mam"
   | "18S"
   | "COI"
   | "ITS1"
@@ -50,6 +52,7 @@ type BetaAnalysis = {
   Title: string;
   Description: string;
   BetaMarkers: BetaMarkerAnalysis[];
+  Gamma: GammaAnalysis["ID"];
 };
 type BetaMarkerAnalysis = {
   Marker: MarkerType;

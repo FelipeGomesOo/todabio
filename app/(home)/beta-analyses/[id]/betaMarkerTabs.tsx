@@ -2,7 +2,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import BetaDetails from "./BetaDetails";
 import { useGlobalSamples } from "@/context/GlobalSamples";
-
+import { betaHasMarker } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 export default function BetaMarkerTabs({
   analysis,
 }: {
@@ -14,12 +15,19 @@ export default function BetaMarkerTabs({
     selectedMarker,
     setSelectedMarker,
     setIsLoading,
+    currentGamma,
   } = useGlobalSamples();
-
-  if (currentBeta !== analysis.ID) {
+  const router = useRouter();
+  if (betaHasMarker(analysis, selectedMarker)) {
+    if (currentBeta !== analysis.ID) {
+      setIsLoading(true);
+      setCurrentBeta(analysis.ID);
+      console.log("Beta Page changed beta to", analysis.ID);
+    }
+  } else {
     setIsLoading(true);
-    setCurrentBeta(analysis.ID);
-    console.log("Beta Page changed beta to", analysis.ID);
+    setCurrentBeta("All Betas");
+    router.push(`/gamma-analyses/${currentGamma}`);
   }
 
   const defaultMarker: MarkerType =

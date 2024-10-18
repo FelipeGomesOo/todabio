@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useGlobalSamples } from "@/context/GlobalSamples";
 import { getAllBetaAnalyses, getBetaAnalysisByID } from "@/lib/data";
+import { filterBetaByGammaIDandMarker } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 
 export default function FilterByBeta() {
-  const { currentBeta, currentGamma } = useGlobalSamples();
+  const { currentBeta, currentGamma, selectedMarker } = useGlobalSamples();
   const router = useRouter();
   const allBetas = { ID: "All Betas", Title: "All Betas" };
   const currentBetaAnalysis = getBetaAnalysisByID(currentBeta) || allBetas;
@@ -28,7 +29,13 @@ export default function FilterByBeta() {
     }
     //setCurrentBeta(betaID);
   };
-  const betaAnalyses = getAllBetaAnalyses();
+  const betaAnalyses = currentGamma
+    ? filterBetaByGammaIDandMarker(
+        getAllBetaAnalyses(),
+        currentGamma,
+        selectedMarker
+      )
+    : getAllBetaAnalyses();
 
   return (
     <DropdownMenu>

@@ -43,7 +43,11 @@ export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
     useState<BetaAnalysis["ID"]>("All Betas");
   const { fetchCsv } = useFetchCSV();
   const [filteredSamples, setFilteredSamples] = useState<Sample[]>([]);
-
+  const stopLoadingAfterDelay = (delay: number) => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, delay);
+  };
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
@@ -65,21 +69,21 @@ export function GlobalSamplesProvider({ children }: { children: ReactNode }) {
           if (CSVData.length > 0) {
             const samplesWithDAPC = getSamplesWithDAPC(CSVData, betaSamples);
             setFilteredSamples(samplesWithDAPC);
-            setIsLoading(false);
+            stopLoadingAfterDelay(1000);
             console.log("CSVData.length > 0");
           } else {
             setFilteredSamples(betaSamples);
-            setIsLoading(false);
+            stopLoadingAfterDelay(1000);
             console.log("No data returned from CSV.");
           }
         } else {
           setFilteredSamples(betaSamples);
-          setIsLoading(false);
+          stopLoadingAfterDelay(1000);
           console.log("Beta does not contain DAPC");
         }
       } else {
         setFilteredSamples(gammaSamples);
-        setIsLoading(false);
+        stopLoadingAfterDelay(1000);
         console.log("Samples are all betas");
       }
     };

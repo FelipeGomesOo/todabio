@@ -8,7 +8,7 @@
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"; */
 import Link from "next/link";
-import MobileMenu from "@/components/menu/MobileMenu";
+/* import MobileMenu from "@/components/menu/MobileMenu"; */
 /* import { buttonVariants } from "@/components/ui/button"; */
 import LogoTodabio from "../svg/LogoTodabio";
 
@@ -72,7 +72,7 @@ export default function Menu() {
           Verifiable biodiversity
         </Link> */}
       </div>
-      <MobileMenu />
+      {/* <MobileMenu /> */}
     </nav>
   );
 }

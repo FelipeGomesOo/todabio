@@ -1,6 +1,10 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { getBetaAnalysisByID, getBetaMarkerAnalysis } from "./data";
+import {
+  getBetaAnalysisByID,
+  getBetaMarkerAnalysis,
+  getGammaAnalysisByID,
+} from "./data";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -410,4 +414,37 @@ export function getHourAndMinute(dateString: Sample["Timestamp_Sampling"]) {
 }
 export function roundPercentage(value: number, decimals = 2) {
   return `${Number(value).toFixed(decimals)}`;
+}
+export function filterBetaByGammaIDandMarker(
+  betaAnalyses: BetaAnalysis[],
+  gammaID: GammaAnalysis["ID"],
+  marker: MarkerType
+) {
+  const betaAnalysesFiltered = betaAnalyses.filter((betaAnalysis) => {
+    return (
+      betaAnalysis.Gamma === gammaID &&
+      betaAnalysis.BetaMarkers.some(
+        (betaMarker) => betaMarker.Marker === marker
+      )
+    );
+  });
+
+  return betaAnalysesFiltered;
+}
+
+export function getCurrentMarkers(currentGammaID: GammaAnalysis["ID"] | null) {
+  const gamma = currentGammaID && getGammaAnalysisByID(currentGammaID);
+  const GammaMarkers = gamma && gamma.GammaMarkers;
+  const markersArray =
+    GammaMarkers && GammaMarkers.map((marker) => marker.Marker);
+  return markersArray;
+}
+
+export function betaHasMarker(
+  betaAnalysis: BetaAnalysis,
+  marker: MarkerType
+): boolean {
+  return betaAnalysis.BetaMarkers.some(
+    (betaMarker) => betaMarker.Marker === marker
+  );
 }
