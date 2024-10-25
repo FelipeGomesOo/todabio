@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Manrope, PT_Mono } from "next/font/google";
 import "./globals.css";
 import Menu from "@/components/menu/Menu";
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Menu />
         <main className="font-mono flex-1 flex flex-col">{children}</main>
       </body>
+      <GoogleAnalytics gaId="G-R2J7LC28H5" />
     </html>
   );
 }
